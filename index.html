@@ -41,10 +41,12 @@ footer{border-top:1px solid var(--line);padding:28px 0 34px;color:var(--muted);f
 <script>
 (() => {
   const items = [
-    {id:'moth', src:'/assets/moth-icon-final.webp?v=1', alt:'Moth'},
     {id:'lantern', src:'/assets/moth-lantern-final.webp?v=1', alt:'Lantern'},
     {id:'moon', src:'/assets/decor-moon.webp?v=1', alt:'Moon'},
-    {id:'fireflies', src:'/assets/moth-fireflies-final.webp?v=1', alt:'Fireflies'}
+    {id:'fireflies', src:'/assets/moth-fireflies-final.webp?v=1', alt:'Fireflies'},
+    {id:'fern', src:'/assets/game-decor-fern.webp?v=1', alt:'Fern'},
+    {id:'stars', src:'/assets/game-decor-stars.webp?v=1', alt:'Stars'},
+    {id:'mushrooms', src:'/assets/game-decor-mushrooms.webp?v=1', alt:'Mushrooms'}
   ];
   const game = document.getElementById('memoryGame');
   const status = document.getElementById('gameStatus');
@@ -67,7 +69,8 @@ footer{border-top:1px solid var(--line);padding:28px 0 34px;color:var(--muted);f
     matches = 0;
     status.textContent = '0 of 4 pairs found';
     game.innerHTML = '';
-    const deck = shuffle([...items, ...items].map((item, index) => ({...item, key:index + '-' + Math.random()})));
+    const chosen = shuffle([...items]).slice(0, 4);
+    const deck = shuffle([...chosen, ...chosen].map((item, index) => ({...item, key:index + '-' + Math.random()})));
     deck.forEach(item => {
       const button = document.createElement('button');
       button.type = 'button';
