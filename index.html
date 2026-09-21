@@ -36,7 +36,7 @@ footer{border-top:1px solid var(--line);padding:28px 0 34px;color:var(--muted);f
 
 <section class="contact"><div class="wrap"><p class="eyebrow">say hello</p><h2>need help with Moth?</h2><p>Questions, feedback, or support requests can be sent directly to Moth Self Care.</p><a class="btn" href="mailto:support@mothselfcare.com">support@mothselfcare.com</a></div></section>
 </main>
-<footer><div class="wrap foot"><span>© 2026 Moth Self Care LLC</span><div class="footlinks"><a href="/privacy-policy/">privacy policy</a><a href="/support/">support</a></div></div></footer>
+<footer><div class="wrap foot"><span>© 2026 Moth Self Care LLC</span><div class="footlinks"><a href="/privacy-policy/">privacy policy</a><a href="/support/">support</a><a href="/delete-account/">delete account</a></div></div></footer>
 
 <script>
 (() => {
@@ -84,8 +84,9 @@ footer{border-top:1px solid var(--line);padding:28px 0 34px;color:var(--muted);f
       button.className = 'memory-card';
       button.dataset.id = item.id;
       button.dataset.alt = item.alt;
-      button.setAttribute('aria-label', 'hidden memory card');
-      const face = item.symbol ? '<span class="memory-symbol" aria-hidden="true">' + item.symbol + '</span>' : '<img src="' + item.src + '" alt="' + item.alt + '">'; button.innerHTML = '<span class="memory-inner"><span class="memory-face memory-back">✦</span><span class="memory-face memory-front">' + face + '</span></span>';
+      button.setAttribute('aria-label', 'Hidden memory card');
+      button.setAttribute('aria-pressed', 'false');
+      button.innerHTML = '<span class="memory-inner"><span class="memory-face memory-back" aria-hidden="true">✦</span><span class="memory-face memory-front"><img src="' + item.src + '" alt=""></span></span>';
       button.addEventListener('click', () => flip(button));
       game.appendChild(button);
     });
