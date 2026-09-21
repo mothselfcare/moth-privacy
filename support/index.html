@@ -37,12 +37,13 @@ a:focus-visible,button:focus-visible{outline:2px solid #9f7c50;outline-offset:3p
   .foot a{min-height:44px;display:inline-flex;align-items:center}
 }
 
+img{-webkit-user-drag:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none}
 </style>
 </head>
 <body>
-<header><div class="wrap nav"><a class="brand" href="/"><img src="/assets/moth-icon-final.webp?v=2" alt="">Moth</a><div><a href="/">home</a> · <a href="/privacy-policy/">privacy</a></div></div></header>
+<header><div class="wrap nav"><a class="brand" href="/"><img draggable="false" src="/assets/moth-icon-final.webp?v=2" alt="">Moth</a><div><a href="/">home</a> · <a href="/privacy-policy/">privacy</a></div></div></header>
 <main class="wrap">
-<div class="page-mark" aria-hidden="true"><img src="/assets/moth-fireflies-final.webp?v=1" alt=""></div>
+<div class="page-mark" aria-hidden="true"><img draggable="false" src="/assets/moth-fireflies-final.webp?v=1" alt=""></div>
 <p class="eyebrow">we're here to help</p>
 <h1>Moth Support</h1>
 <p class="intro">If something isn't working, you have a question about Moth, or you want to share feedback, send us an email and we'll take a look.</p>
@@ -63,7 +64,8 @@ a:focus-visible,button:focus-visible{outline:2px solid #9f7c50;outline-offset:3p
 <p>If you have a Moth account and want it deleted, visit the <a href="/delete-account/">account deletion page</a> for instructions.</p>
 </div>
 </main>
-<div class="footer-mark" aria-hidden="true"><span>✦</span><img src="/assets/moth-fireflies-final.webp?v=1" alt=""><span>✦</span></div>
+<div class="footer-mark" aria-hidden="true"><span>✦</span><img draggable="false" src="/assets/moth-fireflies-final.webp?v=1" alt=""><span>✦</span></div>
 <footer><div class="wrap foot"><span>© 2026 Moth Self Care LLC</span><div><a href="/">home</a> · <a href="/privacy-policy/">privacy policy</a> · <a href="/delete-account/">delete account</a></div></div></footer>
+<script data-moth-asset-guard>document.addEventListener("dragstart",e=>{if(e.target&&e.target.tagName==="IMG")e.preventDefault()});document.addEventListener("contextmenu",e=>{if(e.target&&e.target.tagName==="IMG")e.preventDefault()});</script>
 </body>
 </html>
