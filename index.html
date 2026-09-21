@@ -5,34 +5,110 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#f5efe6">
 <meta name="description" content="Moth is a gentle self-care app for affirmations, small quests, reflection, and a little world that grows with you.">
-<link rel="icon" type="image/png" sizes="512x512" href="/assets/icon.png?v=4">
-<link rel="apple-touch-icon" href="/assets/icon.png?v=4">
+<link rel="icon" type="image/png" sizes="512x512" href="/assets/icon.png?v=5">
+<link rel="apple-touch-icon" href="/assets/icon.png?v=5">
 <title>Moth — a gentler kind of self-care</title>
 <style>
 :root{--cream:#f5efe6;--paper:#fffaf4;--ink:#3f3731;--muted:#786c62;--line:#dfd3c5;--moss:#65705e;--umber:#6f5a49;--gold:#bd945d}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:linear-gradient(180deg,#f8f3eb 0%,var(--cream) 100%);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65}a{color:inherit}.wrap{width:min(1060px,calc(100% - 36px));margin:auto}
 header{padding:22px 0}.nav{display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:11px;text-decoration:none;font-weight:800}.brand img{width:42px;height:42px;border-radius:14px;box-shadow:0 8px 24px rgba(72,57,45,.12)}nav{display:flex;gap:22px;font-size:14px;color:var(--muted)}nav a{text-decoration:none}
 .hero{padding:72px 0 92px}.hero-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:64px;align-items:center}.eyebrow{margin:0 0 16px;color:var(--moss);font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:500;line-height:1.04;letter-spacing:-.03em}h1{font-size:clamp(54px,7vw,86px);margin:0;max-width:680px}.lead{font-size:clamp(18px,2vw,21px);color:var(--muted);max-width:650px;margin:25px 0 0}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 21px;border-radius:999px;background:var(--moss);color:#fffaf3;text-decoration:none;font-size:14px;font-weight:750}.btn.alt{background:transparent;color:var(--ink);border:1px solid var(--line)}.soon{font-size:13px;color:var(--muted);margin:14px 0 0}
-.hero-art{position:relative;min-height:430px;display:grid;place-items:center}.halo{position:absolute;width:330px;height:330px;border-radius:50%;background:radial-gradient(circle,#f1dfb9 0 55%,rgba(241,223,185,0) 56%);opacity:.72}.app-icon{position:relative;width:min(300px,76%);aspect-ratio:1;border-radius:32%;box-shadow:0 28px 70px rgba(76,58,43,.18);transform:rotate(-2deg)}.spark{position:absolute;font-family:Georgia,serif;color:var(--gold);opacity:.75}.s1{top:42px;left:34px;font-size:29px}.s2{right:18px;top:90px;font-size:19px}.s3{left:60px;bottom:56px;font-size:18px}
+.hero-art{position:relative;min-height:430px;display:grid;place-items:center}.halo{position:absolute;width:330px;height:330px;border-radius:50%;background:radial-gradient(circle,#f1dfb9 0 55%,rgba(241,223,185,0) 56%);opacity:.72}.app-icon{position:relative;width:min(300px,76%);aspect-ratio:1;border-radius:32%;box-shadow:0 28px 70px rgba(76,58,43,.18);transform:rotate(-2deg);z-index:2}.hero-moon{position:absolute;width:132px;right:-10px;top:16px;opacity:.82;transform:rotate(8deg);filter:drop-shadow(0 12px 24px rgba(70,55,42,.10))}.hero-fireflies{position:absolute;width:125px;left:8px;bottom:14px;opacity:.78;filter:drop-shadow(0 12px 22px rgba(70,55,42,.08))}.spark{position:absolute;font-family:Georgia,serif;color:var(--gold);opacity:.75;z-index:3}.s1{top:42px;left:34px;font-size:29px}.s2{right:18px;top:90px;font-size:19px}.s3{left:60px;bottom:56px;font-size:18px}
 .section{padding:78px 0}.paper{background:rgba(255,250,244,.68);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.section-head{max-width:680px;margin-bottom:32px}.section h2{font-size:clamp(38px,5vw,56px);margin:0 0 14px}.section-head p{margin:0;color:var(--muted);font-size:18px}
 .moments{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.moment{padding:4px 10px 8px 0}.moment .num{font-family:Georgia,serif;font-size:18px;color:var(--gold);margin-bottom:18px}.moment h3{font-size:27px;margin:0 0 10px}.moment p{margin:0;color:var(--muted)}
 .note{display:grid;grid-template-columns:150px 1fr;gap:34px;align-items:center;padding:36px 42px;border:1px solid var(--line);border-radius:30px;background:#6c6056;color:#fffaf3;box-shadow:0 22px 55px rgba(62,48,38,.11)}.note img{width:140px;max-width:100%;filter:drop-shadow(0 12px 20px rgba(0,0,0,.12))}.note h2{margin:0 0 12px;font-size:clamp(34px,4vw,48px)}.note p{margin:0;color:#ede4da;font-size:18px;max-width:720px}
-.contact{text-align:center;padding:88px 0 98px}.contact h2{font-size:clamp(38px,5vw,54px);margin:0 0 14px}.contact p{max-width:610px;margin:0 auto;color:var(--muted)}.contact .btn{margin-top:24px}
+.play{padding:76px 0 88px;background:rgba(255,250,244,.56);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.play-grid{display:grid;grid-template-columns:.78fr 1.22fr;gap:54px;align-items:center}.play-copy p{color:var(--muted);font-size:17px;max-width:470px}.play-copy h2{font-size:clamp(38px,5vw,54px);margin:0 0 14px}.game-wrap{padding:24px;border:1px solid var(--line);border-radius:28px;background:rgba(255,250,244,.9);box-shadow:0 18px 46px rgba(70,55,42,.07)}.game-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.memory-card{position:relative;aspect-ratio:1;border:0;padding:0;background:transparent;cursor:pointer;perspective:700px}.memory-inner{position:absolute;inset:0;transition:transform .36s ease;transform-style:preserve-3d}.memory-card.open .memory-inner,.memory-card.matched .memory-inner{transform:rotateY(180deg)}.memory-face{position:absolute;inset:0;border-radius:18px;display:grid;place-items:center;backface-visibility:hidden;border:1px solid var(--line)}.memory-back{background:#74685d;color:#f5e8ce;font-family:Georgia,serif;font-size:26px}.memory-front{background:#fffaf4;transform:rotateY(180deg)}.memory-front img{width:72%;height:72%;object-fit:contain}.game-meta{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:16px;color:var(--muted);font-size:13px}.reset-game{border:0;background:transparent;color:var(--ink);font:inherit;font-weight:700;cursor:pointer;padding:6px 0}.matched{pointer-events:none}.contact{text-align:center;padding:88px 0 98px}.contact h2{font-size:clamp(38px,5vw,54px);margin:0 0 14px}.contact p{max-width:610px;margin:0 auto;color:var(--muted)}.contact .btn{margin-top:24px}
 footer{border-top:1px solid var(--line);padding:28px 0 34px;color:var(--muted);font-size:13px}.foot{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}.footlinks{display:flex;gap:18px}.foot a{text-decoration:none}
-@media(max-width:780px){.hero{padding:42px 0 70px}.hero-grid{grid-template-columns:1fr;gap:36px}.hero-art{min-height:320px;order:-1}.halo{width:250px;height:250px}.app-icon{width:220px}nav a:first-child{display:none}.moments{grid-template-columns:1fr;gap:30px}.note{grid-template-columns:1fr;text-align:center;padding:30px 24px}.note img{margin:auto;width:115px}.section{padding:62px 0}}
+@media(max-width:780px){.hero{padding:42px 0 70px}.hero-grid{grid-template-columns:1fr;gap:36px}.hero-art{min-height:320px;order:-1}.halo{width:250px;height:250px}.app-icon{width:220px}.hero-moon{width:96px;right:4px}.hero-fireflies{width:92px;left:8px}nav a:first-child{display:none}.moments{grid-template-columns:1fr;gap:30px}.note{grid-template-columns:1fr;text-align:center;padding:30px 24px}.note img{margin:auto;width:115px}.play-grid{grid-template-columns:1fr;gap:30px}.game-wrap{padding:16px}.memory-face{border-radius:14px}.section{padding:62px 0}}
 </style>
 </head>
 <body>
-<header><div class="wrap nav"><a class="brand" href="/"><img src="/assets/icon.png?v=4" alt=""><span>Moth</span></a><nav><a href="#about">about</a><a href="/privacy-policy/">privacy</a><a href="/support/">support</a></nav></div></header>
+<header><div class="wrap nav"><a class="brand" href="/"><img src="/assets/icon.png?v=5" alt=""><span>Moth</span></a><nav><a href="#about">about</a><a href="/privacy-policy/">privacy</a><a href="/support/">support</a></nav></div></header>
 <main>
-<section class="hero"><div class="wrap hero-grid"><div><p class="eyebrow">self-care, without the pressure</p><h1>a softer place to come back to.</h1><p class="lead">Moth brings together affirmations, small quests, reflection, moth discoveries, and a growing collection of real moths — all in one calm daily space.</p><div class="actions"><a class="btn" href="#about">meet Moth</a><a class="btn alt" href="/support/">support</a></div><p class="soon">coming soon to iOS and Android</p></div><div class="hero-art" aria-hidden="true"><div class="halo"></div><span class="spark s1">✦</span><span class="spark s2">·</span><span class="spark s3">✧</span><img class="app-icon" src="/assets/icon.png?v=4" alt=""></div></div></section>
+<section class="hero"><div class="wrap hero-grid"><div><p class="eyebrow">self-care, without the pressure</p><h1>a softer place to come back to.</h1><p class="lead">Moth brings together affirmations, small quests, reflection, moth discoveries, and a growing collection of real moths — all in one calm daily space.</p><div class="actions"><a class="btn" href="#about">meet Moth</a><a class="btn alt" href="/support/">support</a></div><p class="soon">coming soon to iOS and Android</p></div><div class="hero-art" aria-hidden="true"><div class="halo"></div><img class="hero-moon" src="/assets/decor-moon.webp?v=1" alt=""><img class="hero-fireflies" src="/assets/decor-fireflies.webp?v=1" alt=""><span class="spark s1">✦</span><span class="spark s2">·</span><span class="spark s3">✧</span><img class="app-icon" src="/assets/icon.png?v=5" alt=""></div></div></section>
 
 <section class="section paper" id="about"><div class="wrap"><div class="section-head"><p class="eyebrow">little things, made meaningful</p><h2>built for ordinary days.</h2><p>No perfect routine required. Open Moth when you want a small nudge, something to think about, or simply a quiet moment that belongs to you.</p></div><div class="moments"><article class="moment"><div class="num">01</div><h3>small moments</h3><p>Affirmations, thoughtful quests, useful words, curious facts, and gentle prompts for everyday life.</p></article><article class="moment"><div class="num">02</div><h3>a world that grows</h3><p>Watch your streaks grow, earn achievements, discover real moth species, and see your journey take shape over time.</p></article><article class="moment"><div class="num">03</div><h3>keep what matters</h3><p>Save favorites and reflections so good thoughts, memories, and moments have somewhere to live.</p></article></div></div></section>
 
 <section class="section"><div class="wrap"><div class="note"><img src="/assets/achievement-lantern.webp" alt=""><div><p class="eyebrow" style="color:#ead9b8">made with care</p><h2>a place worth coming back to.</h2><p>Moth is designed to feel warm, personal, and easy to return to — giving you small things to do without turning self-care into another checklist.</p></div></div></div></section>
 
+
+<section class="play" id="little-game"><div class="wrap play-grid"><div class="play-copy"><p class="eyebrow">a little extra</p><h2>moth memory.</h2><p>Find the four matching pairs. Nothing to win, nothing to keep up with — just a tiny thing to do for a minute.</p></div><div class="game-wrap"><div class="game-grid" id="memoryGame" aria-label="Moth memory matching game"></div><div class="game-meta"><span id="gameStatus">0 of 4 pairs found</span><button class="reset-game" id="resetGame" type="button">shuffle again</button></div></div></div></section>
+
 <section class="contact"><div class="wrap"><p class="eyebrow">say hello</p><h2>need help with Moth?</h2><p>Questions, feedback, or support requests can be sent directly to Moth Self Care.</p><a class="btn" href="mailto:support@mothselfcare.com">support@mothselfcare.com</a></div></section>
 </main>
 <footer><div class="wrap foot"><span>© 2026 Moth Self Care LLC</span><div class="footlinks"><a href="/privacy-policy/">privacy policy</a><a href="/support/">support</a></div></div></footer>
+
+<script>
+(() => {
+  const items = [
+    {id:'moth', src:'/assets/icon.png?v=5', alt:'Moth'},
+    {id:'lantern', src:'/assets/achievement-lantern.webp', alt:'Lantern'},
+    {id:'moon', src:'/assets/decor-moon.webp?v=1', alt:'Moon'},
+    {id:'fireflies', src:'/assets/decor-fireflies.webp?v=1', alt:'Fireflies'}
+  ];
+  const game = document.getElementById('memoryGame');
+  const status = document.getElementById('gameStatus');
+  const reset = document.getElementById('resetGame');
+  let open = [];
+  let locked = false;
+  let matches = 0;
+
+  function shuffle(arr) {
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+  }
+
+  function build() {
+    open = [];
+    locked = false;
+    matches = 0;
+    status.textContent = '0 of 4 pairs found';
+    game.innerHTML = '';
+    const deck = shuffle([...items, ...items].map((item, index) => ({...item, key:index + '-' + Math.random()})));
+    deck.forEach(item => {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'memory-card';
+      button.dataset.id = item.id;
+      button.setAttribute('aria-label', 'hidden memory card');
+      button.innerHTML = '<span class="memory-inner"><span class="memory-face memory-back">✦</span><span class="memory-face memory-front"><img src="' + item.src + '" alt="' + item.alt + '"></span></span>';
+      button.addEventListener('click', () => flip(button));
+      game.appendChild(button);
+    });
+  }
+
+  function flip(card) {
+    if (locked || card.classList.contains('open') || card.classList.contains('matched')) return;
+    card.classList.add('open');
+    open.push(card);
+    if (open.length < 2) return;
+    const [a,b] = open;
+    if (a.dataset.id === b.dataset.id) {
+      a.classList.add('matched');
+      b.classList.add('matched');
+      a.classList.remove('open');
+      b.classList.remove('open');
+      open = [];
+      matches += 1;
+      status.textContent = matches === 4 ? 'all four found ✦' : matches + ' of 4 pairs found';
+      return;
+    }
+    locked = true;
+    setTimeout(() => {
+      a.classList.remove('open');
+      b.classList.remove('open');
+      open = [];
+      locked = false;
+    }, 650);
+  }
+
+  reset.addEventListener('click', build);
+  build();
+})();
+</script>
+
 </body>
 </html>
