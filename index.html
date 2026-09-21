@@ -9,7 +9,7 @@
 <link rel="apple-touch-icon" href="/assets/moth-icon-final.webp?v=2">
 <title>Moth — a gentler kind of self-care</title>
 <style>
-:root{--cream:#f5efe6;--paper:#fffaf4;--ink:#3f3731;--muted:#786c62;--line:#dfd3c5;--moss:#65705e;--umber:#6f5a49;--gold:#bd945d}
+:root{--cream:#f5efe6;--paper:#fffaf4;--ink:#3f3731;--muted:#74685e;--line:#dfd3c5;--moss:#65705e;--umber:#6f5a49;--gold:#bd945d}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:linear-gradient(180deg,#f8f3eb 0%,var(--cream) 100%);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65}a{color:inherit}.wrap{width:min(1060px,calc(100% - 36px));margin:auto}
 header{padding:22px 0}.nav{display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:11px;text-decoration:none;font-weight:800}.brand img{width:42px;height:42px;border-radius:14px;box-shadow:0 8px 24px rgba(72,57,45,.12)}nav{display:flex;gap:22px;font-size:14px;color:var(--muted)}nav a{text-decoration:none}
 .hero{padding:72px 0 92px}.hero-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:64px;align-items:center}.eyebrow{margin:0 0 16px;color:var(--moss);font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:500;line-height:1.04;letter-spacing:-.03em}h1{font-size:clamp(54px,7vw,86px);margin:0;max-width:680px}.lead{font-size:clamp(18px,2vw,21px);color:var(--muted);max-width:650px;margin:25px 0 0}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 21px;border-radius:999px;background:var(--moss);color:#fffaf3;text-decoration:none;font-size:14px;font-weight:750}.btn.alt{background:transparent;color:var(--ink);border:1px solid var(--line)}.soon{font-size:13px;color:var(--muted);margin:14px 0 0}
@@ -32,7 +32,7 @@ footer{border-top:1px solid var(--line);padding:28px 0 34px;color:var(--muted);f
 <section class="section"><div class="wrap"><div class="note"><img src="/assets/moth-lantern-final.webp?v=1" alt=""><div><p class="eyebrow" style="color:#ead9b8">made with care</p><h2>a place worth coming back to.</h2><p>Moth is designed to feel warm, personal, and easy to return to — giving you small things to do without turning self-care into another checklist.</p></div></div></div></section>
 
 
-<section class="play" id="little-game"><div class="wrap play-grid"><div class="play-copy"><p class="eyebrow">a little extra</p><h2>moth memory.</h2><p>Find the four matching pairs. Nothing to win, nothing to keep up with — just a tiny thing to do for a minute.</p></div><div class="game-wrap"><div class="game-grid" id="memoryGame" aria-label="Moth memory matching game"></div><div class="game-meta"><span id="gameStatus">0 of 4 pairs found</span><button class="reset-game" id="resetGame" type="button">shuffle again</button></div></div></div></section>
+<section class="play" id="little-game"><div class="wrap play-grid"><div class="play-copy"><p class="eyebrow">a little extra</p><h2>moth memory.</h2><p>Find the four matching pairs. Nothing to win, nothing to keep up with — just a tiny thing to do for a minute.</p></div><div class="game-wrap"><div class="game-grid" id="memoryGame" aria-label="Moth memory matching game"></div><div class="game-meta"><span id="gameStatus" role="status" aria-live="polite">0 of 4 pairs found</span><button class="reset-game" id="resetGame" type="button" aria-label="Shuffle the memory game and choose a new set of decorations">shuffle again</button></div></div></div></section>
 
 <section class="contact"><div class="wrap"><p class="eyebrow">say hello</p><h2>need help with Moth?</h2><p>Questions, feedback, or support requests can be sent directly to Moth Self Care.</p><a class="btn" href="mailto:support@mothselfcare.com">support@mothselfcare.com</a></div></section>
 </main>
@@ -54,6 +54,7 @@ footer{border-top:1px solid var(--line);padding:28px 0 34px;color:var(--muted);f
   let open = [];
   let locked = false;
   let matches = 0;
+  let previousSet = '';
 
   function shuffle(arr) {
     for (let i = arr.length - 1; i > 0; i--) {
@@ -69,13 +70,20 @@ footer{border-top:1px solid var(--line);padding:28px 0 34px;color:var(--muted);f
     matches = 0;
     status.textContent = '0 of 4 pairs found';
     game.innerHTML = '';
-    const chosen = shuffle([...items]).slice(0, 4);
+    let chosen;
+    let setKey;
+    do {
+      chosen = shuffle([...items]).slice(0, 4);
+      setKey = chosen.map(item => item.id).sort().join('|');
+    } while (items.length > 4 && setKey === previousSet);
+    previousSet = setKey;
     const deck = shuffle([...chosen, ...chosen].map((item, index) => ({...item, key:index + '-' + Math.random()})));
     deck.forEach(item => {
       const button = document.createElement('button');
       button.type = 'button';
       button.className = 'memory-card';
       button.dataset.id = item.id;
+      button.dataset.alt = item.alt;
       button.setAttribute('aria-label', 'hidden memory card');
       const face = item.symbol ? '<span class="memory-symbol" aria-hidden="true">' + item.symbol + '</span>' : '<img src="' + item.src + '" alt="' + item.alt + '">'; button.innerHTML = '<span class="memory-inner"><span class="memory-face memory-back">✦</span><span class="memory-face memory-front">' + face + '</span></span>';
       button.addEventListener('click', () => flip(button));
@@ -86,12 +94,16 @@ footer{border-top:1px solid var(--line);padding:28px 0 34px;color:var(--muted);f
   function flip(card) {
     if (locked || card.classList.contains('open') || card.classList.contains('matched')) return;
     card.classList.add('open');
+    card.setAttribute('aria-label', card.dataset.alt || 'Revealed memory card');
+    card.setAttribute('aria-pressed', 'true');
     open.push(card);
     if (open.length < 2) return;
     const [a,b] = open;
     if (a.dataset.id === b.dataset.id) {
       a.classList.add('matched');
       b.classList.add('matched');
+      a.setAttribute('aria-label', a.dataset.alt + ' — matched');
+      b.setAttribute('aria-label', b.dataset.alt + ' — matched');
       a.classList.remove('open');
       b.classList.remove('open');
       open = [];
@@ -103,6 +115,10 @@ footer{border-top:1px solid var(--line);padding:28px 0 34px;color:var(--muted);f
     setTimeout(() => {
       a.classList.remove('open');
       b.classList.remove('open');
+      a.setAttribute('aria-label', 'Hidden memory card');
+      b.setAttribute('aria-label', 'Hidden memory card');
+      a.setAttribute('aria-pressed', 'false');
+      b.setAttribute('aria-pressed', 'false');
       open = [];
       locked = false;
     }, 650);
