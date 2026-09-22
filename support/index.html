@@ -38,18 +38,25 @@ a:focus-visible,button:focus-visible{outline:2px solid #9f7c50;outline-offset:3p
   .nav{align-items:center;gap:10px;flex-wrap:wrap}
   
   .nav-links{font-size:13px;gap:10px}
+  .nav-links a:first-child{display:none}
   .nav a{min-height:44px;display:inline-flex;align-items:center}
   main{padding:34px 0 68px}
   h1{font-size:clamp(38px,11vw,48px);line-height:1.04}
   .intro{font-size:17px}
   .page-mark{margin-bottom:14px}
   .page-mark img{width:30px;height:30px}
-  .foot{gap:6px}
-  .footlinks{width:100%;gap:8px 14px}
-  .foot a{min-height:44px;display:inline-flex;align-items:center}
+  .foot{gap:2px}
+  .footlinks{width:100%;gap:0 14px}
+  .foot a{min-height:34px;padding:5px 0;display:inline-flex;align-items:center}
+  .footer-mark{display:none}
+  footer{padding:22px 0 24px}
+  .footer-social{margin-top:4px;gap:0 12px}
+  .footer-social>span{display:none}
+  .footer-social .social-links{gap:0 12px;font-size:12px}
+  .footer-social .social-links a,.footer-social .social-links a:visited{min-height:32px;padding:4px 0}
 }
 
-.footer-social{margin-top:12px;padding-top:12px;border-top:1px solid rgba(111,90,73,.14);display:flex;align-items:center;gap:6px 16px;flex-wrap:wrap;color:var(--muted)}.footer-social>span{font-weight:700;color:var(--ink)}.footer-social .social-links{display:flex;align-items:center;gap:4px 14px;flex-wrap:wrap}.footer-social .social-links a,.footer-social .social-links a:visited{color:var(--muted);text-decoration:none;padding:8px 2px;min-height:44px;display:inline-flex;align-items:center;transition:color .18s ease,text-decoration-color .18s ease}.footer-social .social-links a:hover{color:var(--ink);text-decoration:underline;text-decoration-color:#c0a477;text-underline-offset:4px}
+.footer-social{margin-top:4px;display:flex;align-items:center;gap:4px 14px;flex-wrap:wrap;color:var(--muted);font-size:12.5px}.footer-social>span{font-weight:700;color:var(--ink)}.footer-social .social-links{display:flex;align-items:center;gap:2px 13px;flex-wrap:wrap}.footer-social .social-links a,.footer-social .social-links a:visited{color:var(--muted);text-decoration:none;padding:5px 0;min-height:34px;display:inline-flex;align-items:center;transition:color .18s ease,text-decoration-color .18s ease}.footer-social .social-links a:hover{color:var(--ink);text-decoration:underline;text-decoration-color:#c0a477;text-underline-offset:4px}
 img{-webkit-user-drag:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none}
 </style>
 </head>
@@ -79,7 +86,7 @@ img{-webkit-user-drag:none;user-select:none;-webkit-user-select:none;-webkit-tou
 </main>
 
 <div class="footer-mark" aria-hidden="true"><img draggable="false" class="tiny-star" src="/assets/christmas-star.webp?v=2" alt=""><img draggable="false" src="/assets/moth-fireflies-final.webp?v=1" alt=""><img draggable="false" class="tiny-star" src="/assets/christmas-star.webp?v=2" alt=""></div>
-<footer><div class="wrap foot"><span>© 2026 Moth Self Care LLC</span><nav class="footlinks" aria-label="Footer"><a href="/">home</a><a href="/privacy-policy/">privacy policy</a><a href="/terms/">terms</a><a href="/delete-account/">delete account</a></nav></div><div class="wrap footer-social"><span>find Moth</span><nav class="social-links" aria-label="Social media"><a href="https://www.instagram.com/mothselfcare/" rel="me external">instagram</a><a href="https://www.tiktok.com/@mothselfcare" rel="me external">tiktok</a><a href="https://www.youtube.com/@mothselfcare" rel="me external">youtube</a><a href="https://www.pinterest.com/mothselfcare/" rel="me external">pinterest</a><a href="https://www.threads.net/@mothselfcare" rel="me external">threads</a><a href="https://x.com/mothselfcare" rel="me external">x (twitter)</a><a href="https://www.facebook.com/people/Moth-SelfCare/61593922463944/" rel="me external">facebook</a></nav></div></footer>
+<footer><div class="wrap foot"><span>© 2026 Moth Self Care LLC</span><nav class="footlinks" aria-label="Footer"><a href="/">home</a><a href="/privacy-policy/">privacy policy</a><a href="/terms/">terms</a><a href="/delete-account/">delete account</a></nav></div><div class="wrap footer-social"><span>@mothselfcare</span><nav class="social-links" aria-label="Social media"><a href="https://www.instagram.com/mothselfcare/" rel="me external">instagram</a><a href="https://www.tiktok.com/@mothselfcare" rel="me external">tiktok</a><a href="https://www.youtube.com/@mothselfcare" rel="me external">youtube</a><a href="https://www.pinterest.com/mothselfcare/" rel="me external">pinterest</a><a href="https://www.threads.net/@mothselfcare" rel="me external">threads</a><a href="https://x.com/mothselfcare" rel="me external">x (twitter)</a><a href="https://www.facebook.com/people/Moth-SelfCare/61593922463944/" rel="me external">facebook</a></nav></div></footer>
 <script data-moth-asset-guard>document.addEventListener("dragstart",e=>{if(e.target&&e.target.tagName==="IMG")e.preventDefault()});document.addEventListener("contextmenu",e=>{if(e.target&&e.target.tagName==="IMG")e.preventDefault()});</script>
 </body>
 </html>
