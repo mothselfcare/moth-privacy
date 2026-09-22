@@ -1,0 +1,1 @@
+(()=>{document.querySelectorAll(".language-switch").forEach(link=>{link.addEventListener("click",()=>{try{localStorage.setItem("moth-language",link.dataset.language||"")}catch{}})})})();
