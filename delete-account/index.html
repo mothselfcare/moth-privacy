@@ -6,6 +6,9 @@
 <meta name="theme-color" content="#f7f1e7" data-light="#f7f1e7">
 <meta name="description" content="Instructions for requesting deletion of a Moth account and associated cloud data.">
 <link rel="canonical" href="https://mothselfcare.com/delete-account/">
+<link rel="alternate" hreflang="en" href="https://mothselfcare.com/delete-account/">
+<link rel="alternate" hreflang="es" href="https://mothselfcare.com/es/eliminar-cuenta/">
+<link rel="alternate" hreflang="x-default" href="https://mothselfcare.com/delete-account/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Moth">
 <meta property="og:title" content="Delete your Moth account | Moth">
@@ -70,10 +73,11 @@ html[data-theme="dark"] .box{border-color:var(--line);background:rgba(48,41,35,.
 html[data-theme="dark"] .btn{background:#91a087;color:#171512;border-color:rgba(201,219,191,.22);box-shadow:inset 0 1px rgba(255,255,255,.08),0 8px 24px rgba(0,0,0,.18)}
 html[data-theme="dark"] .nav a:hover,html[data-theme="dark"] .foot a:hover{color:var(--ink)}
 
+.language-switch{display:inline-flex;align-items:center;justify-content:center;min-width:42px;height:42px;padding:0 10px;border:1px solid var(--line);border-radius:14px;text-decoration:none!important;font-size:11px!important;font-weight:800;letter-spacing:.08em;color:var(--muted)!important;background:rgba(255,250,244,.32);transition:transform .18s ease,background .18s ease,color .18s ease,border-color .18s ease}.language-switch:hover{color:var(--ink)!important;transform:translateY(-1px)}html[data-theme="dark"] .language-switch{background:rgba(255,247,236,.045);color:var(--muted)!important}@media(max-width:480px){.language-switch{min-width:38px;height:38px;border-radius:13px;padding:0 8px}}@media(prefers-reduced-motion:reduce){.language-switch{transition:none!important}}
 </style>
 <script src="/seasonal.js?v=1" defer></script>\n</head>
 <body>
-<header><div class="wrap nav"><a class="brand" href="/">Moth</a><nav class="nav-links" aria-label="Primary"><a href="/">home</a><a href="/our-story/">our story</a><a href="/support/">support</a><a href="/privacy-policy/">privacy</a><button class="theme-toggle" type="button" aria-label="switch to dark mode" aria-pressed="false" title="switch to dark mode"></button></nav></div></header>
+<header><div class="wrap nav"><a class="brand" href="/">Moth</a><nav class="nav-links" aria-label="Primary"><a href="/">home</a><a href="/our-story/">our story</a><a href="/support/">support</a><a href="/privacy-policy/">privacy</a><a class="language-switch" href="/es/eliminar-cuenta/" hreflang="es" lang="es" data-language="es" aria-label="Ver esta página en español">ES</a><button class="theme-toggle" type="button" aria-label="switch to dark mode" aria-pressed="false" title="switch to dark mode"></button></nav></div></header>
 <main class="wrap">
 <div class="page-mark" aria-hidden="true"><img draggable="false" src="/assets/game-decor-stars.webp?v=1" alt=""></div>
 <p class="eyebrow">account deletion</p>
@@ -121,5 +125,6 @@ const followSystem=e=>{if(!savedTheme())applyTheme(e.matches?"dark":"light",fals
 if(media.addEventListener)media.addEventListener("change",followSystem);else if(media.addListener)media.addListener(followSystem);
 })();
 </script>
+<script src="/language.js?v=1" defer></script>
 </body>
 </html>
