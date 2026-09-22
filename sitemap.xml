@@ -1,9 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://mothselfcare.com/</loc></url>
-  <url><loc>https://mothselfcare.com/our-story/</loc></url>
-  <url><loc>https://mothselfcare.com/privacy-policy/</loc></url>
-  <url><loc>https://mothselfcare.com/terms/</loc></url>
-  <url><loc>https://mothselfcare.com/support/</loc></url>
-  <url><loc>https://mothselfcare.com/delete-account/</loc></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://mothselfcare.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mothselfcare.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mothselfcare.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mothselfcare.com/"/>
+  </url>
+  <url>
+    <loc>https://mothselfcare.com/es/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mothselfcare.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mothselfcare.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mothselfcare.com/"/>
+  </url>
+  <url>
+    <loc>https://mothselfcare.com/our-story/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mothselfcare.com/our-story/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mothselfcare.com/es/nuestra-historia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mothselfcare.com/our-story/"/>
+  </url>
+  <url>
+    <loc>https://mothselfcare.com/es/nuestra-historia/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mothselfcare.com/our-story/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mothselfcare.com/es/nuestra-historia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mothselfcare.com/our-story/"/>
+  </url>
+  <url>
+    <loc>https://mothselfcare.com/privacy-policy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mothselfcare.com/privacy-policy/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mothselfcare.com/es/politica-de-privacidad/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mothselfcare.com/privacy-policy/"/>
+  </url>
+  <url>
+    <loc>https://mothselfcare.com/es/politica-de-privacidad/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mothselfcare.com/privacy-policy/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mothselfcare.com/es/politica-de-privacidad/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mothselfcare.com/privacy-policy/"/>
+  </url>
+  <url>
+    <loc>https://mothselfcare.com/terms/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mothselfcare.com/terms/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mothselfcare.com/es/terminos/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mothselfcare.com/terms/"/>
+  </url>
+  <url>
+    <loc>https://mothselfcare.com/es/terminos/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mothselfcare.com/terms/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mothselfcare.com/es/terminos/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mothselfcare.com/terms/"/>
+  </url>
+  <url>
+    <loc>https://mothselfcare.com/support/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mothselfcare.com/support/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mothselfcare.com/es/soporte/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mothselfcare.com/support/"/>
+  </url>
+  <url>
+    <loc>https://mothselfcare.com/es/soporte/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mothselfcare.com/support/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mothselfcare.com/es/soporte/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mothselfcare.com/support/"/>
+  </url>
+  <url>
+    <loc>https://mothselfcare.com/delete-account/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mothselfcare.com/delete-account/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mothselfcare.com/es/eliminar-cuenta/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mothselfcare.com/delete-account/"/>
+  </url>
+  <url>
+    <loc>https://mothselfcare.com/es/eliminar-cuenta/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mothselfcare.com/delete-account/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mothselfcare.com/es/eliminar-cuenta/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mothselfcare.com/delete-account/"/>
+  </url>
 </urlset>
