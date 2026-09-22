@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#f7f1e7">
+<meta name="theme-color" content="#f7f1e7" data-light="#f7f1e7">
 <meta name="description" content="Support for Moth, including bug reports, feedback, privacy questions, and account deletion requests.">
 <link rel="canonical" href="https://mothselfcare.com/support/">
 <meta property="og:type" content="website">
@@ -19,6 +19,7 @@
 <meta name="twitter:image" content="https://mothselfcare.com/assets/moth-icon-final.webp?v=2">
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<script>(()=>{try{const saved=localStorage.getItem("moth-theme");const theme=saved==="dark"||saved!=="light"&&window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.dataset.theme=theme;document.documentElement.style.colorScheme=theme;const meta=document.querySelector('meta[name="theme-color"]');if(meta&&theme==="dark")meta.content="#201c19"}catch{}})();</script>
 <title>Support | Moth</title>
 <style>
 :root{--cream:#f7f1e7;--paper:#fffaf2;--ink:#40372f;--muted:#786b61;--line:#ddd1c1;--moss:#596552}
@@ -58,10 +59,26 @@ a:focus-visible,button:focus-visible{outline:2px solid #9f7c50;outline-offset:3p
 
 .footer-social{margin-top:4px;display:flex;align-items:center;gap:4px 14px;flex-wrap:wrap;color:var(--muted);font-size:12.5px}.footer-social>span{font-weight:700;color:var(--ink)}.footer-social .social-links{display:flex;align-items:center;gap:2px 13px;flex-wrap:wrap}.footer-social .social-links a,.footer-social .social-links a:visited{color:var(--muted);text-decoration:none;padding:5px 0;min-height:34px;display:inline-flex;align-items:center;transition:color .18s ease,text-decoration-color .18s ease}.footer-social .social-links a:hover{color:var(--ink);text-decoration:underline;text-decoration-color:#c0a477;text-underline-offset:4px}
 img{-webkit-user-drag:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none}
+
+.theme-toggle{position:relative;flex:0 0 42px;width:42px;height:42px;border:1px solid var(--line);border-radius:14px;background:rgba(255,250,244,.42);color:var(--ink);cursor:pointer;display:inline-grid;place-items:center;padding:0;touch-action:manipulation;box-shadow:inset 0 1px rgba(255,255,255,.34);transition:transform .18s ease,background .18s ease,border-color .18s ease,color .18s ease}
+.theme-toggle::before{content:"☾";font-family:Georgia,"Times New Roman",serif;font-size:20px;line-height:1;transform:translateY(-1px)}
+html[data-theme="dark"]{color-scheme:dark;--cream:#201c19;--paper:#2a2420;--ink:#f4e8da;--muted:#c4b3a3;--line:#4d4239;--moss:#a8b69d;--umber:#c5a98b;--gold:#d2a86f}
+html[data-theme="dark"] body{background:radial-gradient(circle at 12% 14%,rgba(237,205,139,.15) 0 1px,transparent 1.5px),radial-gradient(circle at 81% 22%,rgba(237,205,139,.1) 0 .9px,transparent 1.4px),radial-gradient(circle at 66% 72%,rgba(237,205,139,.09) 0 .8px,transparent 1.3px),linear-gradient(180deg,#25201c 0%,#1d1a17 100%);color:var(--ink);background-attachment:fixed}
+html[data-theme="dark"] body::before{opacity:.15;mix-blend-mode:screen}
+html[data-theme="dark"] .theme-toggle{background:rgba(255,247,236,.045);border-color:var(--line);color:var(--ink);box-shadow:inset 0 1px rgba(255,255,255,.05)}
+html[data-theme="dark"] .theme-toggle::before{content:"☀";font-size:17px;transform:none}
+html[data-theme="dark"] a:focus-visible,html[data-theme="dark"] button:focus-visible{outline-color:#d0ab78}
+@media(hover:hover) and (pointer:fine){.theme-toggle:hover{transform:translateY(-1px);background:rgba(255,250,244,.68)}html[data-theme="dark"] .theme-toggle:hover{background:rgba(255,247,236,.08)}}
+@media(prefers-reduced-motion:reduce){.theme-toggle{transition:none!important}}
+
+html[data-theme="dark"] .box{border-color:var(--line);background:linear-gradient(180deg,rgba(47,40,35,.96),rgba(39,33,29,.94));box-shadow:0 12px 30px rgba(0,0,0,.13)}
+html[data-theme="dark"] .box:hover{border-color:#66574b;box-shadow:0 16px 34px rgba(0,0,0,.18)}
+html[data-theme="dark"] .nav a:hover,html[data-theme="dark"] .foot a:hover{color:var(--ink)}
+
 </style>
 </head>
 <body>
-<header><div class="wrap nav"><a class="brand" href="/">Moth</a><nav class="nav-links" aria-label="Primary"><a href="/">home</a><a href="/our-story/">our story</a><a href="/privacy-policy/">privacy</a></nav></div></header>
+<header><div class="wrap nav"><a class="brand" href="/">Moth</a><nav class="nav-links" aria-label="Primary"><a href="/">home</a><a href="/our-story/">our story</a><a href="/privacy-policy/">privacy</a><button class="theme-toggle" type="button" aria-label="switch to dark mode" aria-pressed="false" title="switch to dark mode"></button></nav></div></header>
 <main class="wrap">
 <div class="page-mark" aria-hidden="true"><img draggable="false" src="/assets/moth-fireflies-final.webp?v=1" alt=""></div>
 <p class="eyebrow">we're here to help</p>
@@ -88,5 +105,15 @@ img{-webkit-user-drag:none;user-select:none;-webkit-user-select:none;-webkit-tou
 <div class="footer-mark" aria-hidden="true"><img draggable="false" class="tiny-star" src="/assets/christmas-star.webp?v=2" alt=""><img draggable="false" src="/assets/moth-fireflies-final.webp?v=1" alt=""><img draggable="false" class="tiny-star" src="/assets/christmas-star.webp?v=2" alt=""></div>
 <footer><div class="wrap foot"><span>© 2026 Moth Self Care LLC</span><nav class="footlinks" aria-label="Footer"><a href="/">home</a><a href="/privacy-policy/">privacy policy</a><a href="/terms/">terms</a><a href="/delete-account/">delete account</a></nav></div><div class="wrap footer-social"><span>@mothselfcare</span><nav class="social-links" aria-label="Social media"><a href="https://www.instagram.com/mothselfcare/" rel="me external">instagram</a><a href="https://www.tiktok.com/@mothselfcare" rel="me external">tiktok</a><a href="https://www.youtube.com/@mothselfcare" rel="me external">youtube</a><a href="https://www.pinterest.com/mothselfcare/" rel="me external">pinterest</a><a href="https://www.threads.net/@mothselfcare" rel="me external">threads</a><a href="https://x.com/mothselfcare" rel="me external">x (twitter)</a><a href="https://www.facebook.com/people/Moth-SelfCare/61593922463944/" rel="me external">facebook</a></nav></div></footer>
 <script data-moth-asset-guard>document.addEventListener("dragstart",e=>{if(e.target&&e.target.tagName==="IMG")e.preventDefault()});document.addEventListener("contextmenu",e=>{if(e.target&&e.target.tagName==="IMG")e.preventDefault()});</script>
+<script>
+(()=>{const root=document.documentElement;const button=document.querySelector(".theme-toggle");const meta=document.querySelector('meta[name="theme-color"]');const media=window.matchMedia("(prefers-color-scheme: dark)");
+const savedTheme=()=>{try{return localStorage.getItem("moth-theme")}catch{return null}};
+const applyTheme=(theme,persist)=>{root.dataset.theme=theme;root.style.colorScheme=theme;if(meta)meta.content=theme==="dark"?"#201c19":(meta.dataset.light||"#f7f1e7");if(button){const dark=theme==="dark";button.setAttribute("aria-pressed",String(dark));button.setAttribute("aria-label",dark?"switch to light mode":"switch to dark mode");button.setAttribute("title",dark?"switch to light mode":"switch to dark mode")}if(persist)try{localStorage.setItem("moth-theme",theme)}catch{}};
+applyTheme(root.dataset.theme||((savedTheme()==="dark"||savedTheme()!=="light"&&media.matches)?"dark":"light"),false);
+if(button)button.addEventListener("click",()=>applyTheme(root.dataset.theme==="dark"?"light":"dark",true));
+const followSystem=e=>{if(!savedTheme())applyTheme(e.matches?"dark":"light",false)};
+if(media.addEventListener)media.addEventListener("change",followSystem);else if(media.addListener)media.addListener(followSystem);
+})();
+</script>
 </body>
 </html>
