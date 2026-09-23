@@ -12,7 +12,7 @@ caught:(n,total)=>`${n} of ${total} fireflies caught`,allCaught:"you caught them
 hidden:"Hidden memory card ",revealed:"Revealed memory card",matched:" matched",pairs:(n,total)=>n===total?"all pairs found":n+" of "+total+" pairs found"
 };
 const assets={
-moon:"/assets/decor-moon.webp?v=1",stars:"/assets/game-decor-stars.webp?v=1",fireflies:"/assets/moth-fireflies-final.webp?v=1",lantern:"/assets/moth-lantern-final.webp?v=1",moth:"/assets/moth-icon-final.webp?v=2",mothPeek:"/assets/laid-down-moth.webp?v=1",fern:"/assets/game-decor-fern.webp?v=1",mush:"/assets/game-decor-mushrooms.webp?v=1",
+moon:"/assets/decor-moon.webp?v=1",stars:"/assets/game-decor-stars.webp?v=1",fireflies:"/assets/moth-fireflies-final.webp?v=1",lantern:"/assets/moth-lantern-final.webp?v=1",moth:"/assets/moth-icon-final.webp?v=2",mothPeek:"/assets/welcome-silk-moth-footer.webp?v=2",fern:"/assets/game-decor-fern.webp?v=1",mush:"/assets/game-decor-mushrooms.webp?v=1",
 seasonal:{
 spring:["/assets/memory/spring-wild-violet.webp?v=1","/assets/memory/spring-fiddlehead-fern.webp?v=1","/assets/memory/spring-morel.webp?v=1"],
 summer:["/assets/memory/summer-mulberry.webp?v=1","/assets/memory/summer-yarrow.webp?v=1","/assets/memory/summer-indigo-milk-cap.webp?v=1"],
