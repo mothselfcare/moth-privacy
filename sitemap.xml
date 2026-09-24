@@ -49,6 +49,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mothselfcare.com/privacy-policy/"/>
   </url>
   <url>
+    <loc>https://mothselfcare.com/consumer-health-data/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mothselfcare.com/consumer-health-data/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mothselfcare.com/es/datos-de-salud-del-consumidor/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mothselfcare.com/consumer-health-data/"/>
+  </url>
+  <url>
+    <loc>https://mothselfcare.com/es/datos-de-salud-del-consumidor/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mothselfcare.com/consumer-health-data/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mothselfcare.com/es/datos-de-salud-del-consumidor/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mothselfcare.com/consumer-health-data/"/>
+  </url>
+  <url>
     <loc>https://mothselfcare.com/terms/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://mothselfcare.com/terms/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://mothselfcare.com/es/terminos/"/>
