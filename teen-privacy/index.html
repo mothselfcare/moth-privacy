@@ -91,10 +91,24 @@ html[data-theme="dark"] .page-nav{background:rgba(42,36,32,.72)}
 html[data-theme="dark"] .page-nav summary:focus-visible{outline-color:#d0ab78}
 @media(hover:hover) and (pointer:fine){.page-nav-links a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}}
 @media(max-width:640px){.page-nav{margin-top:24px}.page-nav-links{grid-template-columns:1fr;gap:0}}
+
+/* shared internal-page navigation + footer hierarchy */
+.nav{align-items:center}.nav-links{justify-content:flex-end}
+.footer-link-groups{display:grid;gap:2px;justify-items:end}
+.footlinks{justify-content:flex-end}
+.footlinks-main a{font-weight:700;color:var(--ink)}
+.footlinks-legal{font-size:12px}
+.footlinks-legal a{color:var(--muted)}
+@media(max-width:640px){
+  .nav{align-items:center}
+  .nav-links>a:not(.language-switch){display:none}
+  .footer-link-groups{width:100%;justify-items:start}
+  .footlinks{justify-content:flex-start}
+}
 </style>
 <script src="/seasonal.js?v=6" defer></script></head>
 <body>
-<header><div class="wrap nav"><a class="brand" href="/">Moth</a><nav class="nav-links" aria-label="Primary"><a href="/">home</a><a href="/our-story/">our story</a><a href="/support/">support</a><a class="language-switch" href="/es/privacidad-para-adolescentes/" hreflang="es" data-language="es" aria-label="View this page in Spanish">ES</a><button class="theme-toggle" type="button" aria-label="switch to dark mode" aria-pressed="false" title="switch to dark mode"></button></nav></div></header>
+<header><div class="wrap nav"><a class="brand" href="/">Moth</a><nav class="nav-links" aria-label="Primary"><a href="/our-story/">our story</a><a href="/sources/">sources</a><a href="/support/">support</a><a class="language-switch" href="/es/privacidad-para-adolescentes/" hreflang="es" data-language="es" aria-label="View this page in Spanish">ES</a><button class="theme-toggle" type="button" aria-label="switch to dark mode" aria-pressed="false" title="switch to dark mode"></button></nav></div></header>
 <main class="wrap">
 <div class="page-mark" aria-hidden="true"><img draggable="false" src="/assets/game-decor-fern.webp?v=1" alt=""></div>
 <p class="eyebrow">Moth</p>
@@ -145,7 +159,7 @@ html[data-theme="dark"] .page-nav summary:focus-visible{outline-color:#d0ab78}
 <p>For privacy questions, requests, or concerns, contact <a href="mailto:support@mothselfcare.com">support@mothselfcare.com</a>.</p>
 </main>
 <div class="footer-mark" aria-hidden="true"><img draggable="false" class="tiny-star" src="/assets/game-decor-stars.webp?v=1" alt=""><img draggable="false" src="/assets/game-decor-fern.webp?v=1" alt=""><img draggable="false" class="tiny-star" src="/assets/game-decor-stars.webp?v=1" alt=""></div>
-<footer><div class="wrap foot"><span>© 2026 Moth</span><nav class="footlinks" aria-label="Footer"><a href="/">home</a><a href="/privacy-policy/">privacy policy</a><a href="/consumer-health-data/">consumer health data</a><a href="/terms/">terms</a><a href="/support/">support</a><a href="/delete-account/">delete account</a></nav></div></footer>
+<footer><div class="wrap foot"><span>© 2026 Moth</span><div class="footer-link-groups"><nav class="footlinks footlinks-main" aria-label="Footer"><a href="/">home</a><a href="/our-story/">our story</a><a href="/sources/">sources</a><a href="/support/">support</a></nav><nav class="footlinks footlinks-legal" aria-label="Legal"><a href="/privacy-policy/">privacy policy</a><a href="/consumer-health-data/">consumer health data</a><a href="/teen-privacy/">teen privacy</a><a href="/terms/">terms</a><a href="/delete-account/">delete account</a></nav></div></div></footer>
 <script data-moth-asset-guard>document.addEventListener("dragstart",e=>{if(e.target&&e.target.tagName==="IMG")e.preventDefault()});document.addEventListener("contextmenu",e=>{if(e.target&&e.target.tagName==="IMG")e.preventDefault()});</script>
 <script>
 (()=>{const root=document.documentElement;const button=document.querySelector(".theme-toggle");const meta=document.querySelector('meta[name="theme-color"]');const media=window.matchMedia("(prefers-color-scheme: dark)");
