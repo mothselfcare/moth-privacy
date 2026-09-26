@@ -94,21 +94,32 @@ html[data-theme="dark"] .page-nav summary:focus-visible{outline-color:#d0ab78}
 
 /* shared internal-page navigation + footer hierarchy */
 .nav{align-items:center}.nav-links{justify-content:flex-end}
+.mobile-site-menu{display:none;position:relative}
+.mobile-site-menu summary{list-style:none;height:42px;padding:0 11px;border:1px solid var(--line);border-radius:14px;background:var(--paper);color:var(--muted);cursor:pointer;align-items:center;justify-content:center;font-size:13px;font-weight:700;line-height:1;white-space:nowrap;user-select:none}
+.mobile-site-menu summary::-webkit-details-marker{display:none}
+.mobile-site-menu[open]>summary{color:var(--ink);border-color:#c7b69d}
+.mobile-site-menu-panel{position:absolute;right:0;top:calc(100% + 8px);z-index:60;min-width:190px;padding:8px;border:1px solid var(--line);border-radius:16px;background:var(--paper);box-shadow:0 14px 36px rgba(72,57,45,.14)}
+.mobile-site-menu-panel a{display:flex;align-items:center;min-height:44px;padding:0 12px;border-radius:10px;color:var(--ink);text-decoration:none;font-size:14px}
+.mobile-site-menu-panel a:focus-visible{outline:2px solid #9f7c50;outline-offset:1px}
 .footer-link-groups{display:grid;gap:2px;justify-items:end}
 .footlinks{justify-content:flex-end}
 .footlinks-main a{font-weight:700;color:var(--ink)}
 .footlinks-legal{font-size:12px}
 .footlinks-legal a{color:var(--muted)}
+@media(hover:hover) and (pointer:fine){.mobile-site-menu summary:hover{color:var(--ink)}.mobile-site-menu-panel a:hover{background:rgba(101,112,94,.09)}}
 @media(max-width:640px){
   .nav{align-items:center}
   .nav-links>a:not(.language-switch){display:none}
+  .mobile-site-menu{display:block}
+  .mobile-site-menu summary{display:inline-flex}
   .footer-link-groups{width:100%;justify-items:start}
   .footlinks{justify-content:flex-start}
 }
+@media(prefers-reduced-motion:reduce){.mobile-site-menu summary,.mobile-site-menu-panel a{transition:none!important}}
 </style>
 <script src="/seasonal.js?v=6" defer></script></head>
 <body>
-<header><div class="wrap nav"><a class="brand" href="/">Moth</a><nav class="nav-links" aria-label="Primary"><a href="/our-story/">our story</a><a href="/sources/">sources</a><a href="/support/">support</a><a class="language-switch" href="/es/politica-de-privacidad/" hreflang="es" data-language="es" aria-label="View this page in Spanish">ES</a><button class="theme-toggle" type="button" aria-label="switch to dark mode" aria-pressed="false" title="switch to dark mode"></button></nav></div></header>
+<header><div class="wrap nav"><a class="brand" href="/">Moth</a><nav class="nav-links" aria-label="Primary"><a href="/our-story/">our story</a><a href="/sources/">sources</a><a href="/support/">support</a><details class="mobile-site-menu"><summary>menu</summary><div class="mobile-site-menu-panel"><a href="/">home</a><a href="/our-story/">our story</a><a href="/sources/">sources</a><a href="/support/">support</a></div></details><a class="language-switch" href="/es/politica-de-privacidad/" hreflang="es" data-language="es" aria-label="View this page in Spanish">ES</a><button class="theme-toggle" type="button" aria-label="switch to dark mode" aria-pressed="false" title="switch to dark mode"></button></nav></div></header>
 <main class="wrap">
 <div class="page-mark" aria-hidden="true"><img draggable="false" src="/assets/game-decor-fern.webp?v=1" alt=""></div>
 <p class="eyebrow">Moth</p>
