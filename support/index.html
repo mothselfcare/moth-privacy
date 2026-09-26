@@ -84,6 +84,7 @@ html[data-theme="dark"] .nav a:hover,html[data-theme="dark"] .foot a:hover{color
 
 /* shared internal-page navigation + footer hierarchy */
 .nav{align-items:center}.nav-links{justify-content:flex-end}
+.nav-links>a[aria-current="page"],.mobile-site-menu-panel a[aria-current="page"]{color:var(--ink);text-decoration:underline;text-decoration-color:#c0a477;text-underline-offset:4px;text-decoration-thickness:1px}
 .mobile-site-menu{display:none;position:relative}
 .mobile-site-menu summary{list-style:none;height:44px;padding:0 11px;border:1px solid var(--line);border-radius:14px;background:var(--paper);color:var(--muted);cursor:pointer;align-items:center;justify-content:center;font-size:13px;font-weight:700;line-height:1;white-space:nowrap;user-select:none}
 .mobile-site-menu summary::-webkit-details-marker{display:none}
@@ -113,7 +114,7 @@ html[data-theme="dark"] .nav a:hover,html[data-theme="dark"] .foot a:hover{color
 </style>
 <script src="/seasonal.js?v=6" defer></script></head>
 <body>
-<header><div class="wrap nav"><a class="brand" href="/">Moth</a><nav class="nav-links" aria-label="Primary"><a href="/our-story/">our story</a><a href="/sources/">sources</a><a href="/support/">support</a><details class="mobile-site-menu"><summary>menu</summary><div class="mobile-site-menu-panel"><a href="/">home</a><a href="/our-story/">our story</a><a href="/sources/">sources</a><a href="/support/">support</a></div></details><a class="language-switch" href="/es/soporte/" hreflang="es" data-language="es" aria-label="View this page in Spanish">ES</a><button class="theme-toggle" type="button" aria-label="switch to dark mode" aria-pressed="false" title="switch to dark mode"></button></nav></div></header>
+<header><div class="wrap nav"><a class="brand" href="/">Moth</a><nav class="nav-links" aria-label="Primary"><a href="/our-story/">our story</a><a href="/sources/">sources</a><a href="/support/" aria-current="page">support</a><details class="mobile-site-menu"><summary>menu</summary><div class="mobile-site-menu-panel"><a href="/">home</a><a href="/our-story/">our story</a><a href="/sources/">sources</a><a href="/support/" aria-current="page">support</a></div></details><a class="language-switch" href="/es/soporte/" hreflang="es" data-language="es" aria-label="View this page in Spanish">ES</a><button class="theme-toggle" type="button" aria-label="switch to dark mode" aria-pressed="false" title="switch to dark mode"></button></nav></div></header>
 <main class="wrap">
 <div class="page-mark" aria-hidden="true"><img draggable="false" src="/assets/moth-fireflies-final.webp?v=1" alt=""></div>
 <p class="eyebrow">need help?</p>
