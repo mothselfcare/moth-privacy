@@ -76,6 +76,21 @@ html[data-theme="dark"] p,html[data-theme="dark"] li{color:#dfd1c3}
 html[data-theme="dark"] .nav a:hover,html[data-theme="dark"] .foot a:hover{color:var(--ink)}
 
 .language-switch{display:inline-flex;align-items:center;justify-content:center;min-width:42px;height:42px;padding:0 10px;border:1px solid var(--line);border-radius:14px;text-decoration:none!important;font-size:11px!important;font-weight:800;letter-spacing:.08em;color:var(--muted)!important;background:rgba(255,250,244,.32);transition:transform .18s ease,background .18s ease,color .18s ease,border-color .18s ease}.language-switch:hover{color:var(--ink)!important;transform:translateY(-1px)}html[data-theme="dark"] .language-switch{background:rgba(255,247,236,.045);color:var(--muted)!important}@media(max-width:480px){.language-switch{min-width:38px;height:38px;border-radius:13px;padding:0 8px}}@media(prefers-reduced-motion:reduce){.language-switch{transition:none!important}}
+
+.page-nav{margin:28px 0 8px;border:1px solid var(--line);border-radius:18px;background:rgba(255,250,242,.5);overflow:hidden}
+.page-nav summary{cursor:pointer;list-style:none;padding:14px 17px;display:flex;align-items:center;gap:10px;color:var(--ink);font-size:13px;font-weight:750}
+.page-nav summary::-webkit-details-marker{display:none}
+.page-nav summary::after{content:"+";margin-left:auto;font-family:Georgia,"Times New Roman",serif;font-size:20px;font-weight:400;line-height:1;color:var(--moss)}
+.page-nav[open] summary::after{content:"−"}
+.page-nav-count{color:var(--muted);font-size:12px;font-weight:600}
+.page-nav-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 18px;padding:4px 17px 16px;border-top:1px solid var(--line)}
+.page-nav-links a{padding-top:9px;color:var(--muted);font-size:13px;line-height:1.35;text-decoration:none}
+.page-nav summary:focus-visible{outline:2px solid #9f7c50;outline-offset:-3px;border-radius:14px}
+h2[id]{scroll-margin-top:18px}
+html[data-theme="dark"] .page-nav{background:rgba(42,36,32,.72)}
+html[data-theme="dark"] .page-nav summary:focus-visible{outline-color:#d0ab78}
+@media(hover:hover) and (pointer:fine){.page-nav-links a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}}
+@media(max-width:640px){.page-nav{margin-top:24px}.page-nav-links{grid-template-columns:1fr;gap:0}}
 </style>
 <script src="/seasonal.js?v=6" defer></script></head>
 <body>
@@ -88,7 +103,9 @@ html[data-theme="dark"] .nav a:hover,html[data-theme="dark"] .foot a:hover{color
 
 <p class="intro">Moth está pensado para personas de 13 años o más. Esta página explica de forma más sencilla cómo aborda Moth la privacidad de los adolescentes. Complementa la <a href="/es/politica-de-privacidad/">Política de privacidad</a> completa y el <a href="/es/datos-de-salud-del-consumidor/">Aviso de privacidad de datos de salud del consumidor</a>.</p>
 
-<h2>Las mismas protecciones de privacidad se aplican a todos</h2>
+<details class="page-nav"><summary>en esta página<span class="page-nav-count">9 secciones</span></summary><nav class="page-nav-links" aria-label="Secciones de la página"><a href="#section-1">Las mismas protecciones de privacidad se aplican a todos</a><a href="#section-2">La mayor parte del uso personal empieza en tu dispositivo</a><a href="#section-3">Iniciar sesión es opcional</a><a href="#section-4">Tus controles de privacidad</a><a href="#section-5">El progreso visual es opcional</a><a href="#section-6">Si tienes menos de 13 años</a><a href="#section-7">Padres, tutores y requisitos de la ley local</a><a href="#section-8">La comprobación de edad actual de Moth</a><a href="#section-9">Preguntas</a></nav></details>
+
+<h2 id="section-1">Las mismas protecciones de privacidad se aplican a todos</h2>
 <p>Moth no te pide tu fecha de nacimiento solo para decidir si mereces más privacidad. Antes del uso ordinario de la app, Moth solo pregunta si tienes 13 años o más y guarda localmente en tu dispositivo la confirmación positiva 13+. No utiliza esa confirmación para publicidad, elaboración de perfiles ni personalización. La app aplica una base de alta privacidad a todos los usuarios.</p>
 <ul>
 <li>Moth no vende información personal ni utiliza información personal de la app para publicidad dirigida.</li>
@@ -98,32 +115,34 @@ html[data-theme="dark"] .nav a:hover,html[data-theme="dark"] .foot a:hover{color
 <li>Moth no intenta deducir tu edad a partir de tu forma de escribir, tus reflexiones o tu comportamiento en la app.</li>
 </ul>
 
-<h2>La mayor parte del uso personal empieza en tu dispositivo</h2>
+<h2 id="section-2">La mayor parte del uso personal empieza en tu dispositivo</h2>
 <p>Elementos como preferencias, progreso, Me gusta, contenido personalizado, respuestas a misiones y entradas de Memory Jar pueden guardarse en tu dispositivo. Determinados registros de escritura privada almacenados localmente por Moth utilizan la protección de almacenamiento cifrado de la app.</p>
 <p>Moth no utiliza tus escritos privados para crear un perfil publicitario ni para entrenar un modelo de recomendaciones sobre ti.</p>
 
-<h2>Iniciar sesión es opcional</h2>
+<h2 id="section-3">Iniciar sesión es opcional</h2>
 <p>Puedes usar Moth sin crear una cuenta de Moth. Si decides iniciar sesión, el inicio de sesión abre tu cuenta pero no activa la copia ordinaria en la nube de tu contenido privado de autocuidado. La copia en la nube permanece desactivada hasta que la actives por separado.</p>
-<p>Los escritos privados pueden contener información sobre salud o bienestar. Antes de que la copia ordinaria en la nube pueda almacenar o sincronizar contenido privado de autocuidado compatible, Moth primero hace dos preguntas breves para comprobar que entiendes dónde se almacenará el contenido compatible y que más adelante puedes desactivar la copia en la nube y eliminar la copia ordinaria del servidor. Después Moth solicita una declaración separada de consentimiento explícito que menciona esa posible sensibilidad relacionada con la salud o el bienestar. Más adelante puedes desactivar la copia en la nube desde ajustes; Moth detiene entonces la sincronización ordinaria futura y elimina la copia ordinaria del servidor, mientras conserva tus datos locales y tu cuenta. El <a href="/es/datos-de-salud-del-consumidor/">Aviso de privacidad de datos de salud del consumidor</a> lo explica con más detalle.</p>
+<p>Los escritos privados pueden contener información sobre salud o bienestar. Antes de que la copia ordinaria en la nube pueda almacenar o sincronizar contenido privado de autocuidado compatible, Moth primero hace dos preguntas breves para comprobar que entiendes dónde se almacenará el contenido compatible y que más adelante puedes desactivar la copia en la nube y eliminar la copia ordinaria del servidor.</p>
+<p>Después Moth solicita una declaración separada de consentimiento explícito que menciona esa posible sensibilidad relacionada con la salud o el bienestar. Más adelante puedes desactivar la copia en la nube desde ajustes; Moth detiene entonces la sincronización ordinaria futura y elimina la copia ordinaria del servidor, mientras conserva tus datos locales y tu cuenta. El <a href="/es/datos-de-salud-del-consumidor/">Aviso de privacidad de datos de salud del consumidor</a> lo explica con más detalle.</p>
 
-<h2>Tus controles de privacidad</h2>
+<h2 id="section-4">Tus controles de privacidad</h2>
 <p>Puedes eliminar o reiniciar partes del progreso local mediante los controles de Moth. Si tienes una cuenta, puedes solicitar su eliminación mediante el control autenticado Eliminar cuenta de Moth, la <a href="/es/eliminar-cuenta/">página de eliminación de cuenta</a> o contactando con soporte.</p>
 <p>Para una pregunta o solicitud de privacidad, escribe a <a href="mailto:support@mothselfcare.com">support@mothselfcare.com</a>. No necesitas enviar el texto de una reflexión privada, un diagnóstico, un síntoma u otro dato sensible solo para demostrar quién eres.</p>
 
-<h2>El progreso visual es opcional</h2>
+<h2 id="section-5">El progreso visual es opcional</h2>
 <p>Moth incluye un progreso visual tranquilo, como Días seguidos, crecimiento de plantas, descubrimientos de polillas, logros y coleccionables. Estas funciones son cosméticas y no hacen que tu cuenta sea más fuerte, no crean una clasificación pública, no afectan a otros usuarios y no tienen valor en efectivo. No necesitas mantener una racha ni coleccionar nada para usar las funciones principales de autocuidado, lectura, reflexión o aprendizaje de Moth.</p>
 <p>Algunos descubrimientos o hitos visuales pueden desarrollarse a lo largo de más de una visita o día. Moth no vende protección de rachas ni progreso más rápido, y no utiliza tablas de posiciones públicas ni clasificaciones sociales de rachas.</p>
 
-<h2>Si tienes menos de 13 años</h2>
+<h2 id="section-6">Si tienes menos de 13 años</h2>
 <p>No crees una cuenta de Moth ni proporciones información personal a través de Moth. Moth no mantiene un programa de consentimiento parental para menores de 13 años. Si un padre, madre, tutor u otra persona cree que un menor de 13 años proporcionó información personal a través de Moth, puede contactar con <a href="mailto:support@mothselfcare.com">support@mothselfcare.com</a> para que se revise y elimine cuando corresponda.</p>
 
-<h2>Padres, tutores y requisitos de la ley local</h2>
+<h2 id="section-7">Padres, tutores y requisitos de la ley local</h2>
 <p>Moth no ofrece una función oculta de supervisión parental. Si la ley del lugar donde vives exige el consentimiento de un padre, madre o tutor antes de que un adolescente use Moth o una función concreta, ese requisito sigue siendo aplicable.</p>
 
-<h2>La comprobación de edad actual de Moth</h2>
-<p>La comprobación actual de Moth solo pregunta si tienes 13 años o más. No pide tu fecha de nacimiento, edad exacta, documento de identidad ni información biométrica, y la confirmación positiva permanece en tu dispositivo. Si indicas que tienes menos de 13 años, Moth no continúa. Si una ley exige en el futuro una comprobación de edad más sólida, Moth dará prioridad, cuando sea posible, a una señal de rango de edad que preserve la privacidad y explicará cualquier información adicional implicada.</p>
+<h2 id="section-8">La comprobación de edad actual de Moth</h2>
+<p>La comprobación actual de Moth solo pregunta si tienes 13 años o más. No pide tu fecha de nacimiento, edad exacta, documento de identidad ni información biométrica, y la confirmación positiva permanece en tu dispositivo. Si indicas que tienes menos de 13 años, Moth no continúa.</p>
+<p>Si una ley exige en el futuro una comprobación de edad más sólida, Moth dará prioridad, cuando sea posible, a una señal de rango de edad que preserve la privacidad y explicará cualquier información adicional implicada.</p>
 
-<h2>Preguntas</h2>
+<h2 id="section-9">Preguntas</h2>
 <p>Para preguntas, solicitudes o inquietudes de privacidad, contacta con <a href="mailto:support@mothselfcare.com">support@mothselfcare.com</a>.</p>
 </main>
 <div class="footer-mark" aria-hidden="true"><img draggable="false" class="tiny-star" src="/assets/game-decor-stars.webp?v=1" alt=""><img draggable="false" src="/assets/game-decor-fern.webp?v=1" alt=""><img draggable="false" class="tiny-star" src="/assets/game-decor-stars.webp?v=1" alt=""></div>

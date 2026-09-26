@@ -76,6 +76,21 @@ html[data-theme="dark"] p,html[data-theme="dark"] li{color:#dfd1c3}
 html[data-theme="dark"] .nav a:hover,html[data-theme="dark"] .foot a:hover{color:var(--ink)}
 
 .language-switch{display:inline-flex;align-items:center;justify-content:center;min-width:42px;height:42px;padding:0 10px;border:1px solid var(--line);border-radius:14px;text-decoration:none!important;font-size:11px!important;font-weight:800;letter-spacing:.08em;color:var(--muted)!important;background:rgba(255,250,244,.32);transition:transform .18s ease,background .18s ease,color .18s ease,border-color .18s ease}.language-switch:hover{color:var(--ink)!important;transform:translateY(-1px)}html[data-theme="dark"] .language-switch{background:rgba(255,247,236,.045);color:var(--muted)!important}@media(max-width:480px){.language-switch{min-width:38px;height:38px;border-radius:13px;padding:0 8px}}@media(prefers-reduced-motion:reduce){.language-switch{transition:none!important}}
+
+.page-nav{margin:28px 0 8px;border:1px solid var(--line);border-radius:18px;background:rgba(255,250,242,.5);overflow:hidden}
+.page-nav summary{cursor:pointer;list-style:none;padding:14px 17px;display:flex;align-items:center;gap:10px;color:var(--ink);font-size:13px;font-weight:750}
+.page-nav summary::-webkit-details-marker{display:none}
+.page-nav summary::after{content:"+";margin-left:auto;font-family:Georgia,"Times New Roman",serif;font-size:20px;font-weight:400;line-height:1;color:var(--moss)}
+.page-nav[open] summary::after{content:"−"}
+.page-nav-count{color:var(--muted);font-size:12px;font-weight:600}
+.page-nav-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 18px;padding:4px 17px 16px;border-top:1px solid var(--line)}
+.page-nav-links a{padding-top:9px;color:var(--muted);font-size:13px;line-height:1.35;text-decoration:none}
+.page-nav summary:focus-visible{outline:2px solid #9f7c50;outline-offset:-3px;border-radius:14px}
+h2[id]{scroll-margin-top:18px}
+html[data-theme="dark"] .page-nav{background:rgba(42,36,32,.72)}
+html[data-theme="dark"] .page-nav summary:focus-visible{outline-color:#d0ab78}
+@media(hover:hover) and (pointer:fine){.page-nav-links a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}}
+@media(max-width:640px){.page-nav{margin-top:24px}.page-nav-links{grid-template-columns:1fr;gap:0}}
 </style>
 <script src="/seasonal.js?v=6" defer></script></head>
 <body>
@@ -89,7 +104,9 @@ html[data-theme="dark"] .nav a:hover,html[data-theme="dark"] .foot a:hover{color
 <p class="intro">Este aviso complementa la <a href="/es/politica-de-privacidad/">Política de privacidad</a> de Moth y explica cómo Moth trata información que puede considerarse datos de salud del consumidor conforme a leyes como la Washington My Health My Data Act y la ley de Nevada sobre datos de salud del consumidor.</p>
 <p>Moth es una app de autocuidado y bienestar general, no un servicio médico. Según algunas leyes, la información no tiene que formar parte de un expediente médico para considerarse datos de salud del consumidor.</p>
 
-<h2>Datos de salud del consumidor que Moth puede recopilar</h2>
+<details class="page-nav"><summary>en esta página<span class="page-nav-count">13 secciones</span></summary><nav class="page-nav-links" aria-label="Secciones de la página"><a href="#section-1">Datos de salud del consumidor que Moth puede recopilar</a><a href="#section-2">Fuentes de los datos de salud del consumidor</a><a href="#section-3">Cómo los usa y trata Moth</a><a href="#section-4">Qué comparte Moth y con quién</a><a href="#section-5">Sin venta, publicidad dirigida ni geocercas de salud</a><a href="#section-6">Recopilación entre sitios</a><a href="#section-7">Tus opciones de privacidad sobre datos de salud</a><a href="#section-8">Cómo presentar una solicitud</a><a href="#section-9">Revisión y corrección</a><a href="#section-10">Eliminación y plazos</a><a href="#section-11">Apelaciones</a><a href="#section-12">Cambios en este aviso</a><a href="#section-13">Contacto</a></nav></details>
+
+<h2 id="section-1">Datos de salud del consumidor que Moth puede recopilar</h2>
 <p>Dependiendo de cómo uses Moth y de lo que decidas escribir, los datos de salud del consumidor pueden incluir:</p>
 <ul>
 <li>reflexiones, entradas de Memory Jar, respuestas a misiones e historial de misiones que contengan información sobre estado de ánimo, estrés, sueño, imagen corporal, salud, bienestar, relajación o temas similares;</li>
@@ -100,14 +117,15 @@ html[data-theme="dark"] .nav a:hover,html[data-theme="dark"] .foot a:hover{color
 </ul>
 <p>Actualmente Moth no se conecta con HealthKit, datos de salud de dispositivos wearables, historiales médicos, rastreadores de síntomas ni servicios externos comparables de datos de salud.</p>
 
-<h2>Fuentes de los datos de salud del consumidor</h2>
+<h2 id="section-2">Fuentes de los datos de salud del consumidor</h2>
 <p>Moth recibe esta información directamente de ti cuando escribes, eliges, guardas, respondes o interactúas con funciones de Moth. Moth también puede derivar un contexto limitado de la app a partir de esas interacciones cuando sea necesario para ofrecer la función que solicitaste. Moth no compra datos de salud del consumidor a intermediarios de datos.</p>
 
-<h2>Cómo los usa y trata Moth</h2>
+<h2 id="section-3">Cómo los usa y trata Moth</h2>
 <p>Moth utiliza los datos de salud del consumidor únicamente para los fines descritos aquí: ofrecer las funciones de autocuidado, reflexión, personalización, progreso y otras funciones de la app que decidas usar; ofrecer la copia de seguridad, sincronización y restauración opcionales cuando actives esa función por separado; responder a solicitudes de soporte o privacidad iniciadas por ti; y proteger, mantener, solucionar problemas y cumplir obligaciones legales relacionadas con esos servicios solicitados.</p>
-<p>Gran parte de Moth funciona con datos almacenados en tu dispositivo. Determinados registros de escritura privada que Moth guarda localmente están cifrados en el dispositivo. Algunas señales de personalización relacionadas con el bienestar permanecen solo en el dispositivo. Iniciar sesión por sí solo no activa la copia ordinaria en la nube. Si activas la copia en la nube por separado, Moth te pide que prestes consentimiento expreso para que almacene y sincronice contenido privado de autocuidado compatible que puede incluir información sobre salud o bienestar. Moth registra ese consentimiento antes de que el servicio ordinario de copias en la nube pueda leer o escribir tu copia.</p>
+<p>Gran parte de Moth funciona con datos almacenados en tu dispositivo. Determinados registros de escritura privada que Moth guarda localmente están cifrados en el dispositivo. Algunas señales de personalización relacionadas con el bienestar permanecen solo en el dispositivo. Iniciar sesión por sí solo no activa la copia ordinaria en la nube.</p>
+<p>Si activas la copia en la nube por separado, Moth te pide que prestes consentimiento expreso para que almacene y sincronice contenido privado de autocuidado compatible que puede incluir información sobre salud o bienestar. Moth registra ese consentimiento antes de que el servicio ordinario de copias en la nube pueda leer o escribir tu copia.</p>
 
-<h2>Qué comparte Moth y con quién</h2>
+<h2 id="section-4">Qué comparte Moth y con quién</h2>
 <p>Las categorías de datos de salud del consumidor que pueden comunicarse se limitan a la información necesaria para la función solicitada:</p>
 <ul>
 <li>el contenido creado por ti que sea compatible, el historial de misiones y el progreso relacionado de una cuenta iniciada pueden ser tratados por proveedores de infraestructura en la nube y autenticación que actúan para Moth con el fin de ofrecer copia de seguridad, sincronización y servicios de cuenta;</li>
@@ -116,13 +134,13 @@ html[data-theme="dark"] .nav a:hover,html[data-theme="dark"] .foot a:hover{color
 </ul>
 <p>Actualmente Moth no tiene ninguna afiliada que reciba datos de salud del consumidor. Moth no comunica datos de salud del consumidor a proveedores de publicidad o analítica para su uso independiente.</p>
 
-<h2>Sin venta, publicidad dirigida ni geocercas de salud</h2>
+<h2 id="section-5">Sin venta, publicidad dirigida ni geocercas de salud</h2>
 <p>Moth no vende datos de salud del consumidor, no los utiliza para publicidad dirigida y no utiliza datos de salud del consumidor para crear geocercas alrededor de servicios de atención médica.</p>
 
-<h2>Recopilación entre sitios</h2>
+<h2 id="section-6">Recopilación entre sitios</h2>
 <p>Moth no autoriza a terceros a recopilar datos de salud del consumidor sobre ti a lo largo del tiempo y entre sitios web o servicios en línea no relacionados cuando utilizas la app o el sitio web de Moth.</p>
 
-<h2>Tus opciones de privacidad sobre datos de salud</h2>
+<h2 id="section-7">Tus opciones de privacidad sobre datos de salud</h2>
 <p>Moth pone a tu disposición las siguientes opciones de solicitud respecto de los datos de salud del consumidor, sujetas a autenticación y a la ley aplicable:</p>
 <ul>
 <li>confirmar si Moth recopila, comparte o vende datos de salud del consumidor sobre ti y solicitar acceso a los datos de salud del consumidor bajo el control de Moth asociados contigo;</li>
@@ -135,26 +153,29 @@ html[data-theme="dark"] .nav a:hover,html[data-theme="dark"] .foot a:hover{color
 </ul>
 <p>Moth no te discrimina por ejercer un derecho aplicable de privacidad sobre datos de salud del consumidor.</p>
 
-<h2>Cómo presentar una solicitud</h2>
+<h2 id="section-8">Cómo presentar una solicitud</h2>
 <p>Escribe a <a href="mailto:support@mothselfcare.com">support@mothselfcare.com</a> con el asunto <strong>Consumer Health Data Request</strong> e indica qué derecho quieres ejercer. Si la solicitud se refiere a una cuenta con sesión iniciada, incluye el correo electrónico ordinario de la cuenta o el identificador necesario para localizarla. No envíes el texto de reflexiones privadas, diagnósticos, síntomas u otros datos de salud únicamente para verificar tu identidad.</p>
 <p>Si has iniciado sesión y quieres eliminar tu cuenta de Moth y los datos asociados en la nube, también puedes usar el control autenticado Eliminar cuenta de Moth o la <a href="/es/eliminar-cuenta/">página de eliminación de cuenta</a>. Moth no te exigirá crear una cuenta nueva solo para presentar una solicitud de privacidad.</p>
 <p>Moth puede tomar medidas razonables para verificar que la solicitud es tuya, preferiblemente usando información que ya esté asociada con tu cuenta o canal de comunicación existente.</p>
 
-<h2>Revisión y corrección</h2>
+<h2 id="section-9">Revisión y corrección</h2>
 <p>Cuando Moth ya ofrezca un control para editar información que tú creaste, puedes usarlo. Para información vinculada a una cuenta y bajo el control de Moth que pueda corregirse de forma significativa, puedes solicitar una revisión por correo electrónico. Si un registro no puede corregirse razonablemente en el mismo lugar, la eliminación y recreación pueden ser el método adecuado. Moth no reescribirá el contenido de una reflexión privada como si fuera un error de exactitud.</p>
 
-<h2>Eliminación y plazos</h2>
+<h2 id="section-10">Eliminación y plazos</h2>
 <p>Moth responde a las solicitudes autenticadas sobre datos de salud del consumidor dentro del plazo exigido por la ley aplicable. Cuando se aplique la ley de Washington o Nevada sobre datos de salud del consumidor, el plazo general de respuesta será de no más de 45 días, con una única prórroga adicional de 45 días cuando la ley lo permita y sea razonablemente necesaria.</p>
-<p>Para la eliminación, Moth elimina los datos pertinentes de los sistemas activos bajo su control y notifica a los procesadores u otros destinatarios afectados cuando sea obligatorio. Moth no puede inspeccionar ni eliminar a distancia datos de salud del consumidor que existan únicamente en tu dispositivo; en su lugar, puede explicarte el control local de eliminación o reinicio correspondiente. La ley aplicable puede permitir que las copias archivadas o de respaldo se eliminen más tarde cuando sea necesario para restaurar un sistema de respaldo. Para solicitudes sujetas a la ley de Washington, esa demora no superará seis meses después de la autenticación.</p>
+<p>Para la eliminación, Moth elimina los datos pertinentes de los sistemas activos bajo su control y notifica a los procesadores u otros destinatarios afectados cuando sea obligatorio. Moth no puede inspeccionar ni eliminar a distancia datos de salud del consumidor que existan únicamente en tu dispositivo; en su lugar, puede explicarte el control local de eliminación o reinicio correspondiente.</p>
+<p>La ley aplicable puede permitir que las copias archivadas o de respaldo se eliminen más tarde cuando sea necesario para restaurar un sistema de respaldo. Para solicitudes sujetas a la ley de Washington, esa demora no superará seis meses después de la autenticación.</p>
 
-<h2>Apelaciones</h2>
-<p>Si Moth se niega a actuar sobre una solicitud relacionada con datos de salud del consumidor, puedes apelar escribiendo a <a href="mailto:support@mothselfcare.com">support@mothselfcare.com</a> con el asunto <strong>Consumer Health Appeal</strong> e identificando brevemente la solicitud anterior. Moth responderá a la apelación dentro del plazo exigido por la ley aplicable, incluidos 45 días cuando se aplique la ley de Washington o Nevada sobre datos de salud del consumidor. Si la apelación sigue siendo denegada, Moth facilitará el método aplicable para contactar con el fiscal general estatal correspondiente cuando sea obligatorio.</p>
+<h2 id="section-11">Apelaciones</h2>
+<p>Si Moth se niega a actuar sobre una solicitud relacionada con datos de salud del consumidor, puedes apelar escribiendo a <a href="mailto:support@mothselfcare.com">support@mothselfcare.com</a> con el asunto <strong>Consumer Health Appeal</strong> e identificando brevemente la solicitud anterior.</p>
+<p>Moth responderá a la apelación dentro del plazo exigido por la ley aplicable, incluidos 45 días cuando se aplique la ley de Washington o Nevada sobre datos de salud del consumidor. Si la apelación sigue siendo denegada, Moth facilitará el método aplicable para contactar con el fiscal general estatal correspondiente cuando sea obligatorio.</p>
 
-<h2>Cambios en este aviso</h2>
-<p>Moth actualizará este aviso antes de comenzar a tratar una categoría, finalidad o destinatario de datos de salud del consumidor materialmente nuevo que deba divulgarse. Moth ya exige una aceptación explícita independiente antes de comenzar la copia ordinaria en la nube de contenido privado de autocuidado compatible. Si la ley aplicable exige un consentimiento afirmativo adicional para un nuevo uso, Moth lo solicitará antes de que comience el nuevo tratamiento; se utilizará un consentimiento separado para compartir cuando sea obligatorio.</p>
+<h2 id="section-12">Cambios en este aviso</h2>
+<p>Moth actualizará este aviso antes de comenzar a tratar una categoría, finalidad o destinatario de datos de salud del consumidor materialmente nuevo que deba divulgarse. Moth ya exige una aceptación explícita independiente antes de comenzar la copia ordinaria en la nube de contenido privado de autocuidado compatible.</p>
+<p>Si la ley aplicable exige un consentimiento afirmativo adicional para un nuevo uso, Moth lo solicitará antes de que comience el nuevo tratamiento; se utilizará un consentimiento separado para compartir cuando sea obligatorio.</p>
 <p>Para cambios materiales que afecten datos de salud del consumidor que Moth ya trate, Moth actualizará la fecha de vigencia y proporcionará un aviso adicional en la app, por correo electrónico, en el sitio web o mediante otro método razonable cuando corresponda o sea obligatorio legalmente.</p>
 
-<h2>Contacto</h2>
+<h2 id="section-13">Contacto</h2>
 <p>Moth es operada por Moth Self Care LLC. Para preguntas o solicitudes de privacidad sobre datos de salud del consumidor, contacta con <a href="mailto:support@mothselfcare.com">support@mothselfcare.com</a>.</p>
 </main>
 <div class="footer-mark" aria-hidden="true"><img draggable="false" class="tiny-star" src="/assets/game-decor-stars.webp?v=1" alt=""><img draggable="false" src="/assets/game-decor-fern.webp?v=1" alt=""><img draggable="false" class="tiny-star" src="/assets/game-decor-stars.webp?v=1" alt=""></div>

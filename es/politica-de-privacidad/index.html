@@ -76,6 +76,21 @@ html[data-theme="dark"] p,html[data-theme="dark"] li{color:#dfd1c3}
 html[data-theme="dark"] .nav a:hover,html[data-theme="dark"] .foot a:hover{color:var(--ink)}
 
 .language-switch{display:inline-flex;align-items:center;justify-content:center;min-width:42px;height:42px;padding:0 10px;border:1px solid var(--line);border-radius:14px;text-decoration:none!important;font-size:11px!important;font-weight:800;letter-spacing:.08em;color:var(--muted)!important;background:rgba(255,250,244,.32);transition:transform .18s ease,background .18s ease,color .18s ease,border-color .18s ease}.language-switch:hover{color:var(--ink)!important;transform:translateY(-1px)}html[data-theme="dark"] .language-switch{background:rgba(255,247,236,.045);color:var(--muted)!important}@media(max-width:480px){.language-switch{min-width:38px;height:38px;border-radius:13px;padding:0 8px}}@media(prefers-reduced-motion:reduce){.language-switch{transition:none!important}}
+
+.page-nav{margin:28px 0 8px;border:1px solid var(--line);border-radius:18px;background:rgba(255,250,242,.5);overflow:hidden}
+.page-nav summary{cursor:pointer;list-style:none;padding:14px 17px;display:flex;align-items:center;gap:10px;color:var(--ink);font-size:13px;font-weight:750}
+.page-nav summary::-webkit-details-marker{display:none}
+.page-nav summary::after{content:"+";margin-left:auto;font-family:Georgia,"Times New Roman",serif;font-size:20px;font-weight:400;line-height:1;color:var(--moss)}
+.page-nav[open] summary::after{content:"−"}
+.page-nav-count{color:var(--muted);font-size:12px;font-weight:600}
+.page-nav-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 18px;padding:4px 17px 16px;border-top:1px solid var(--line)}
+.page-nav-links a{padding-top:9px;color:var(--muted);font-size:13px;line-height:1.35;text-decoration:none}
+.page-nav summary:focus-visible{outline:2px solid #9f7c50;outline-offset:-3px;border-radius:14px}
+h2[id]{scroll-margin-top:18px}
+html[data-theme="dark"] .page-nav{background:rgba(42,36,32,.72)}
+html[data-theme="dark"] .page-nav summary:focus-visible{outline-color:#d0ab78}
+@media(hover:hover) and (pointer:fine){.page-nav-links a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}}
+@media(max-width:640px){.page-nav{margin-top:24px}.page-nav-links{grid-template-columns:1fr;gap:0}}
 </style>
 <script src="/seasonal.js?v=6" defer></script></head>
 <body>
@@ -89,68 +104,81 @@ html[data-theme="dark"] .nav a:hover,html[data-theme="dark"] .foot a:hover{color
 <p class="intro">Moth es una app de autocuidado con afirmaciones, misiones, reflexiones, descubrimientos, progreso y otras funciones. Esta política explica qué información puede procesar Moth y cómo se utiliza.</p>
 <p>Moth es operada por Moth Self Care LLC. Puedes contactar con el Responsable de Privacidad y Delegado de Protección de Datos de Moth en <a href="mailto:support@mothselfcare.com">support@mothselfcare.com</a> para preguntas o solicitudes de privacidad.</p>
 
-<h2>Información que creas en Moth</h2>
+<details class="page-nav"><summary>en esta página<span class="page-nav-count">19 secciones</span></summary><nav class="page-nav-links" aria-label="Secciones de la página"><a href="#section-1">Información que creas en Moth</a><a href="#section-2">Información de cuenta y autenticación</a><a href="#section-3">Copia de seguridad y sincronización en la nube</a><a href="#section-4">Hora confiable e información técnica</a><a href="#section-5">Compras y suscripciones</a><a href="#section-6">Compartir</a><a href="#section-7">Venta de datos y publicidad</a><a href="#section-8">Datos de salud del consumidor</a><a href="#section-9">Conservación y eliminación de tu información</a><a href="#section-10">Proveedores de servicios y procesamiento internacional</a><a href="#section-11">Australia</a><a href="#section-12">Bases jurídicas para usuarios del Reino Unido</a><a href="#section-13">Tus derechos de privacidad</a><a href="#section-14">Seguridad</a><a href="#section-15">Comprobación de edad</a><a href="#section-16">Privacidad para adolescentes</a><a href="#section-17">Menores</a><a href="#section-18">Cambios en esta política</a><a href="#section-19">Contacto</a></nav></details>
+
+<h2 id="section-1">Información que creas en Moth</h2>
 <p>Moth puede almacenar información que creas o generas al usar la app, incluidas afirmaciones y misiones personalizadas, respuestas e historial de misiones, entradas de Memory Jar, contenido guardado o marcado con Me gusta, progreso de la app, actividad de días seguidos, hitos, descubrimientos de polillas, categorías que seleccionas, categorías o tipos de contenido que lees o con los que interactúas y preferencias.</p>
 <p>Gran parte de esta información se guarda localmente en tu dispositivo. Iniciar sesión abre tu cuenta de Moth, pero la copia y sincronización ordinarias en la nube de recuerdos, contenido personalizado y progreso compatibles permanecen desactivadas hasta que elijas activar la copia en la nube por separado.</p>
 
-<h2>Información de cuenta y autenticación</h2>
+<h2 id="section-2">Información de cuenta y autenticación</h2>
 <p>Si decides iniciar sesión, Moth puede recibir del proveedor de autenticación información básica de tu cuenta, como tu dirección de correo electrónico, un identificador de cuenta y la información necesaria para mantener la sesión iniciada. Moth utiliza esta información para ofrecer funciones de cuenta y vincular las copias en la nube con la cuenta correcta.</p>
 
-<h2>Copia de seguridad y sincronización en la nube</h2>
-<p>La copia en la nube es opcional y está separada del inicio de sesión. Antes de poder activarla, Moth hace dos preguntas breves de comprensión para que confirmes que el contenido privado de autocuidado compatible se almacenará en tu cuenta de Moth en la nube y que más adelante puedes desactivar la copia en la nube y eliminar la copia ordinaria del servidor. Después, Moth solicita una declaración separada de consentimiento explícito que explica que el contenido privado de autocuidado compatible puede incluir información sobre salud o bienestar. Moth registra ese consentimiento antes de que su servicio ordinario de copias en la nube pueda leer o escribir tu copia. Puedes desactivar la copia en la nube más adelante; al hacerlo se detiene la sincronización ordinaria futura y se elimina la copia ordinaria de Moth del servidor, mientras tus datos locales y tu cuenta de Moth permanecen intactos. Moth no utiliza las reflexiones guardadas en la nube ni otro contenido personal de autocuidado para publicidad dirigida.</p>
+<h2 id="section-3">Copia de seguridad y sincronización en la nube</h2>
+<p>La copia en la nube es opcional y está separada del inicio de sesión. Antes de poder activarla, Moth hace dos preguntas breves de comprensión para que confirmes que el contenido privado de autocuidado compatible se almacenará en tu cuenta de Moth en la nube y que más adelante puedes desactivar la copia en la nube y eliminar la copia ordinaria del servidor.</p>
+<p>Después, Moth solicita una declaración separada de consentimiento explícito que explica que el contenido privado de autocuidado compatible puede incluir información sobre salud o bienestar.</p>
+<p>Moth registra ese consentimiento antes de que su servicio ordinario de copias en la nube pueda leer o escribir tu copia. Puedes desactivar la copia en la nube más adelante; al hacerlo se detiene la sincronización ordinaria futura y se elimina la copia ordinaria de Moth del servidor, mientras tus datos locales y tu cuenta de Moth permanecen intactos. Moth no utiliza las reflexiones guardadas en la nube ni otro contenido personal de autocuidado para publicidad dirigida.</p>
 
-<h2>Hora confiable e información técnica</h2>
+<h2 id="section-4">Hora confiable e información técnica</h2>
 <p>Moth puede consultar un servicio de hora confiable para que los días seguidos, el contenido de temporada, los descubrimientos y otras funciones basadas en fechas funcionen de forma fiable. Los proveedores de infraestructura de Moth pueden procesar automáticamente información técnica estándar, como la dirección IP, datos del dispositivo o de la solicitud y marcas de tiempo, cuando sea necesario para prestar y proteger sus servicios.</p>
 
-<h2>Compras y suscripciones</h2>
+<h2 id="section-5">Compras y suscripciones</h2>
 <p>Moth ofrece funciones de pago opcionales a través de Moth+. Las compras y suscripciones de Moth+ se procesan mediante App Store o Google Play y los servicios que Moth utiliza para gestionar suscripciones. Moth puede recibir la información necesaria para saber si Moth+ está activo, pero no recibe de la tienda de aplicaciones el número completo de tu tarjeta de pago.</p>
 
-<h2>Compartir</h2>
+<h2 id="section-6">Compartir</h2>
 <p>Moth puede permitirte compartir determinado contenido mediante las funciones de uso compartido de tu dispositivo. Solo se comparte cuando decides utilizar esas funciones. La app o el servicio con el que decidas compartir puede procesar esa información según sus propias prácticas de privacidad.</p>
 
-<h2>Venta de datos y publicidad</h2>
+<h2 id="section-7">Venta de datos y publicidad</h2>
 <p>Moth no vende tu información personal ni utiliza información personal de la app para publicidad dirigida.</p>
 
-<h2>Datos de salud del consumidor</h2>
+<h2 id="section-8">Datos de salud del consumidor</h2>
 <p>Algunas reflexiones, contenido personalizado, categorías elegidas, interacciones e información vinculada a la cuenta pueden considerarse datos de salud del consumidor conforme a determinadas leyes cuando revelan o se relacionan con la salud física o mental o el bienestar. Moth mantiene un <a href="/es/datos-de-salud-del-consumidor/">Aviso de privacidad de datos de salud del consumidor</a> separado que explica las categorías implicadas, cómo se utilizan y comunican, y cómo presentar solicitudes o apelaciones de privacidad relacionadas con datos de salud del consumidor.</p>
 
-<h2>Conservación y eliminación de tu información</h2>
-<p>Moth conserva los datos de cuenta y copia en la nube mientras tu cuenta esté activa para que funcionen las funciones de cuenta, copia de seguridad y sincronización. Cuando eliminas una cuenta de Moth, Moth elimina los datos ordinarios de la cuenta, las copias en la nube, el progreso y el contenido creado por ti mediante su proceso de eliminación de cuenta. Es posible que se conserven por separado registros limitados vinculados a compras después de eliminar la cuenta para que Restaurar compras pueda recuperar coleccionables de Moth+ obtenidos anteriormente. Estos registros de recuperación se seudonimizan mediante hashes con clave en lugar de almacenarse con el perfil ordinario de tu cuenta de Moth, y no contienen entradas de Memory Jar, afirmaciones o misiones personalizadas ni otro contenido ordinario de la copia en la nube. Actualmente Moth conserva estos registros vinculados a compras mientras sean necesarios para ofrecer la restauración de compras y la recuperación de coleccionables, salvo que Moth pueda atender una solicitud verificada de eliminación adicional o que sea necesario conservarlos durante más tiempo por motivos legales, de seguridad, prevención del fraude, contabilidad u obligaciones relacionadas con transacciones de las tiendas de aplicaciones.</p>
-<p>Moth incluye controles que permiten eliminar o reiniciar partes de tu progreso local. También puedes eliminar los datos guardados localmente desinstalando Moth, aunque algunas copias podrían seguir existiendo en respaldos del dispositivo o del sistema operativo. Si tienes una cuenta de Moth, puedes solicitar la eliminación de tu cuenta y de los datos en la nube asociados mediante la <a href="/es/eliminar-cuenta/">página de eliminación de cuenta</a> o contactando con <a href="mailto:support@mothselfcare.com">support@mothselfcare.com</a>. También puedes contactar con esa dirección para preguntar por la información conservada bajo el control de Moth o solicitar su eliminación adicional, sujeto a los registros que Moth o los proveedores de tiendas de aplicaciones y pagos deban conservar por motivos legales o transaccionales.</p>
+<h2 id="section-9">Conservación y eliminación de tu información</h2>
+<p>Moth conserva los datos de cuenta y copia en la nube mientras tu cuenta esté activa para que funcionen las funciones de cuenta, copia de seguridad y sincronización.</p>
+<p>Cuando eliminas una cuenta de Moth, Moth elimina los datos ordinarios de la cuenta, las copias en la nube, el progreso y el contenido creado por ti mediante su proceso de eliminación de cuenta. Es posible que se conserven por separado registros limitados vinculados a compras después de eliminar la cuenta para que Restaurar compras pueda recuperar coleccionables de Moth+ obtenidos anteriormente.</p>
+<p>Estos registros de recuperación se seudonimizan mediante hashes con clave en lugar de almacenarse con el perfil ordinario de tu cuenta de Moth, y no contienen entradas de Memory Jar, afirmaciones o misiones personalizadas ni otro contenido ordinario de la copia en la nube.</p>
+<p>Actualmente Moth conserva estos registros vinculados a compras mientras sean necesarios para ofrecer la restauración de compras y la recuperación de coleccionables, salvo que Moth pueda atender una solicitud verificada de eliminación adicional o que sea necesario conservarlos durante más tiempo por motivos legales, de seguridad, prevención del fraude, contabilidad u obligaciones relacionadas con transacciones de las tiendas de aplicaciones.</p>
+<p>Moth incluye controles que permiten eliminar o reiniciar partes de tu progreso local. También puedes eliminar los datos guardados localmente desinstalando Moth, aunque algunas copias podrían seguir existiendo en respaldos del dispositivo o del sistema operativo. Si tienes una cuenta de Moth, puedes solicitar la eliminación de tu cuenta y de los datos en la nube asociados mediante la <a href="/es/eliminar-cuenta/">página de eliminación de cuenta</a> o contactando con <a href="mailto:support@mothselfcare.com">support@mothselfcare.com</a>.</p>
+<p>También puedes contactar con esa dirección para preguntar por la información conservada bajo el control de Moth o solicitar su eliminación adicional, sujeto a los registros que Moth o los proveedores de tiendas de aplicaciones y pagos deban conservar por motivos legales o transaccionales.</p>
 
-<h2>Proveedores de servicios y procesamiento internacional</h2>
+<h2 id="section-10">Proveedores de servicios y procesamiento internacional</h2>
 <p>Moth utiliza proveedores para autenticación, almacenamiento y sincronización en la nube, hora confiable, distribución de la app y gestión de suscripciones. Estos proveedores pueden procesar información cuando sea necesario para prestar esos servicios. Según dónde vivas y dónde opere un proveedor, la información puede procesarse o almacenarse en un país distinto del tuyo.</p>
 <p>Moth exige que los proveedores y demás terceros que procesan datos de usuarios bajo el control de Moth mantengan protecciones adecuadas de privacidad y seguridad conforme a la ley aplicable, incluidas salvaguardas contractuales u otras medidas para el procesamiento internacional cuando sean necesarias. Sus servicios también pueden regirse por sus propios términos y avisos de privacidad.</p>
 
-<h2>Australia</h2>
-<p>Para usuarios en Australia, Moth trata de forma conservadora como sensible el contenido privado de autocuidado que pueda revelar información sobre la salud física o mental o el bienestar. Antes de poder activar la copia opcional en la nube de contenido privado, debe completarse la comprobación de comprensión descrita anteriormente y después Moth solicita un consentimiento explícito y separado. Si el usuario no demuestra esa comprensión, la copia en la nube de contenido privado permanece desactivada. Las funciones locales de Moth siguen disponibles sin activar esa copia.</p>
+<h2 id="section-11">Australia</h2>
+<p>Para usuarios en Australia, Moth trata de forma conservadora como sensible el contenido privado de autocuidado que pueda revelar información sobre la salud física o mental o el bienestar.</p>
+<p>Antes de poder activar la copia opcional en la nube de contenido privado, debe completarse la comprobación de comprensión descrita anteriormente y después Moth solicita un consentimiento explícito y separado. Si el usuario no demuestra esa comprensión, la copia en la nube de contenido privado permanece desactivada. Las funciones locales de Moth siguen disponibles sin activar esa copia.</p>
 <p>Si estás en Australia y tienes una queja de privacidad, contacta primero con Moth en <a href="mailto:support@mothselfcare.com">support@mothselfcare.com</a>. Si el problema no se resuelve después de que Moth haya tenido una oportunidad razonable de responder, es posible que puedas presentar una queja ante la <a href="https://www.oaic.gov.au/privacy/privacy-complaints">Office of the Australian Information Commissioner (OAIC)</a>.</p>
 
-<h2>Bases jurídicas para usuarios del Reino Unido</h2>
+<h2 id="section-12">Bases jurídicas para usuarios del Reino Unido</h2>
 <p>Cuando se aplica la legislación de protección de datos del Reino Unido, Moth utiliza información personal únicamente cuando existe una base jurídica aplicable. Según la actividad, Moth puede tratar información porque sea necesaria para proporcionar una función o servicio que solicites, porque Moth tenga un interés legítimo en operar, proteger, dar soporte y mantener la fiabilidad del servicio sin prevalecer sobre tus derechos, porque Moth deba cumplir una obligación legal o porque hayas dado tu consentimiento.</p>
-<p>La copia opcional en la nube está separada del inicio de sesión. Cuando el contenido guardado en la nube pueda revelar información sobre la salud física o mental o el bienestar, Moth se basa en el consentimiento explícito y separado para la copia en la nube descrito anteriormente respecto de ese contenido sensible. Puedes retirar ese consentimiento desactivando la copia en la nube. Moth no utiliza contenido sensible guardado en la nube para publicidad, elaboración pública de perfiles ni decisiones con efectos jurídicos o de importancia similar.</p>
+<p>La copia opcional en la nube está separada del inicio de sesión. Cuando el contenido guardado en la nube pueda revelar información sobre la salud física o mental o el bienestar, Moth se basa en el consentimiento explícito y separado para la copia en la nube descrito anteriormente respecto de ese contenido sensible.</p>
+<p>Puedes retirar ese consentimiento desactivando la copia en la nube. Moth no utiliza contenido sensible guardado en la nube para publicidad, elaboración pública de perfiles ni decisiones con efectos jurídicos o de importancia similar.</p>
 
-<h2>Tus derechos de privacidad</h2>
-<p>Según dónde vivas, puedes tener derecho a solicitar acceso a la información personal que Moth controla sobre ti, pedir que se corrija información inexacta, solicitar su eliminación, oponerte o limitar determinados tratamientos, o retirar tu consentimiento cuando Moth se base en él. Para presentar una solicitud de privacidad, contacta con <a href="mailto:support@mothselfcare.com">support@mothselfcare.com</a>. Moth puede necesitar información limitada para verificar una solicitud, pero no necesitas enviar el texto de una reflexión privada, un diagnóstico, un síntoma u otro detalle sensible solo para presentar una solicitud.</p>
+<h2 id="section-13">Tus derechos de privacidad</h2>
+<p>Según dónde vivas, puedes tener derecho a solicitar acceso a la información personal que Moth controla sobre ti, pedir que se corrija información inexacta, solicitar su eliminación, oponerte o limitar determinados tratamientos, o retirar tu consentimiento cuando Moth se base en él.</p>
+<p>Para presentar una solicitud de privacidad, contacta con <a href="mailto:support@mothselfcare.com">support@mothselfcare.com</a>. Moth puede necesitar información limitada para verificar una solicitud, pero no necesitas enviar el texto de una reflexión privada, un diagnóstico, un síntoma u otro detalle sensible solo para presentar una solicitud.</p>
 <p>Retirar el consentimiento no afecta al tratamiento que era lícito antes de retirarlo. Cuando una función depende del consentimiento, retirarlo puede hacer que esa función deje de estar disponible. Por ejemplo, desactivar la copia opcional en la nube de Moth detiene la sincronización ordinaria futura y elimina la copia ordinaria de Moth del servidor, mientras los datos locales y la cuenta de Moth permanecen intactos.</p>
 
-<h2>Seguridad</h2>
+<h2 id="section-14">Seguridad</h2>
 <p>Moth utiliza medidas técnicas y organizativas razonables destinadas a proteger sus datos. No se puede garantizar que ningún dispositivo, sistema de almacenamiento o transmisión por internet sea completamente seguro.</p>
 
-<h2>Comprobación de edad</h2>
-<p>Moth está pensado para personas de 13 años o más. Antes del uso ordinario de la app, Moth solo pregunta si tienes 13 años o más. La app guarda localmente en el dispositivo la confirmación positiva de elegibilidad 13+; esta comprobación no pide tu fecha de nacimiento, edad exacta, documento de identidad ni información biométrica. Si indicas que tienes menos de 13 años, Moth no continúa. Si en el futuro la ley aplicable exige un método más sólido de comprobación de edad, Moth dará prioridad a una señal de rango de edad que preserve la privacidad y explicará cualquier información adicional implicada.</p>
+<h2 id="section-15">Comprobación de edad</h2>
+<p>Moth está pensado para personas de 13 años o más. Antes del uso ordinario de la app, Moth solo pregunta si tienes 13 años o más. La app guarda localmente en el dispositivo la confirmación positiva de elegibilidad 13+; esta comprobación no pide tu fecha de nacimiento, edad exacta, documento de identidad ni información biométrica.</p>
+<p>Si indicas que tienes menos de 13 años, Moth no continúa. Si en el futuro la ley aplicable exige un método más sólido de comprobación de edad, Moth dará prioridad a una señal de rango de edad que preserve la privacidad y explicará cualquier información adicional implicada.</p>
 <p>Para usuarios en los Emiratos Árabes Unidos, esta confirmación 13+ forma parte del enfoque actual de comprobación de edad de Moth para una app de autocuidado que no es una red social. Moth no ofrece perfiles públicos, seguidores, comentarios, chat, mensajes directos, publicaciones públicas ni publicidad dirigida.</p>
 
-<h2>Privacidad para adolescentes</h2>
+<h2 id="section-16">Privacidad para adolescentes</h2>
 <p>Moth aplica una base de alta privacidad de forma amplia en lugar de recopilar fechas de nacimiento exactas solo para distinguir adolescentes de adultos. Una página de <a href="/es/privacidad-para-adolescentes/">Privacidad para adolescentes</a> explica en lenguaje claro la comprobación 13+ actual, el inicio de sesión opcional, el almacenamiento local, la copia opcional en la nube, las opciones de eliminación y la vía de soporte.</p>
 
-<h2>Menores</h2>
-<p>Moth está pensado para personas de 13 años o más. Si tienes menos de 13 años, no crees una cuenta ni proporciones información personal a través de Moth. Si la ley de tu lugar de residencia exige el consentimiento de un padre, madre o tutor para utilizar Moth, dicho consentimiento es obligatorio. Si crees que un menor de 13 años ha proporcionado información personal a través de Moth, ponte en contacto con nosotros para que podamos revisarla y eliminarla cuando corresponda.</p>
+<h2 id="section-17">Menores</h2>
+<p>Moth está pensado para personas de 13 años o más. Si tienes menos de 13 años, no crees una cuenta ni proporciones información personal a través de Moth. Si la ley de tu lugar de residencia exige el consentimiento de un padre, madre o tutor para utilizar Moth, dicho consentimiento es obligatorio.</p>
+<p>Si crees que un menor de 13 años ha proporcionado información personal a través de Moth, ponte en contacto con nosotros para que podamos revisarla y eliminarla cuando corresponda.</p>
 
-<h2>Cambios en esta política</h2>
+<h2 id="section-18">Cambios en esta política</h2>
 <p>Esta Política de privacidad puede cambiar a medida que Moth evolucione o añada funciones. Si eso ocurre, se actualizará la fecha de vigencia al principio de esta página.</p>
 
-<h2>Contacto</h2>
+<h2 id="section-19">Contacto</h2>
 <p>Moth Self Care LLC designa un Responsable de Privacidad y Delegado de Protección de Datos para el cumplimiento de privacidad. Para preguntas, solicitudes de acceso o corrección, solicitudes de eliminación, retirada del consentimiento u otras cuestiones de privacidad, contacta con <a href="mailto:support@mothselfcare.com">support@mothselfcare.com</a>.</p>
 </main>
 <div class="footer-mark" aria-hidden="true"><img draggable="false" class="tiny-star" src="/assets/game-decor-stars.webp?v=1" alt=""><img draggable="false" src="/assets/game-decor-fern.webp?v=1" alt=""><img draggable="false" class="tiny-star" src="/assets/game-decor-stars.webp?v=1" alt=""></div>

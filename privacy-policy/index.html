@@ -76,6 +76,21 @@ html[data-theme="dark"] p,html[data-theme="dark"] li{color:#dfd1c3}
 html[data-theme="dark"] .nav a:hover,html[data-theme="dark"] .foot a:hover{color:var(--ink)}
 
 .language-switch{display:inline-flex;align-items:center;justify-content:center;min-width:42px;height:42px;padding:0 10px;border:1px solid var(--line);border-radius:14px;text-decoration:none!important;font-size:11px!important;font-weight:800;letter-spacing:.08em;color:var(--muted)!important;background:rgba(255,250,244,.32);transition:transform .18s ease,background .18s ease,color .18s ease,border-color .18s ease}.language-switch:hover{color:var(--ink)!important;transform:translateY(-1px)}html[data-theme="dark"] .language-switch{background:rgba(255,247,236,.045);color:var(--muted)!important}@media(max-width:480px){.language-switch{min-width:38px;height:38px;border-radius:13px;padding:0 8px}}@media(prefers-reduced-motion:reduce){.language-switch{transition:none!important}}
+
+.page-nav{margin:28px 0 8px;border:1px solid var(--line);border-radius:18px;background:rgba(255,250,242,.5);overflow:hidden}
+.page-nav summary{cursor:pointer;list-style:none;padding:14px 17px;display:flex;align-items:center;gap:10px;color:var(--ink);font-size:13px;font-weight:750}
+.page-nav summary::-webkit-details-marker{display:none}
+.page-nav summary::after{content:"+";margin-left:auto;font-family:Georgia,"Times New Roman",serif;font-size:20px;font-weight:400;line-height:1;color:var(--moss)}
+.page-nav[open] summary::after{content:"−"}
+.page-nav-count{color:var(--muted);font-size:12px;font-weight:600}
+.page-nav-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 18px;padding:4px 17px 16px;border-top:1px solid var(--line)}
+.page-nav-links a{padding-top:9px;color:var(--muted);font-size:13px;line-height:1.35;text-decoration:none}
+.page-nav summary:focus-visible{outline:2px solid #9f7c50;outline-offset:-3px;border-radius:14px}
+h2[id]{scroll-margin-top:18px}
+html[data-theme="dark"] .page-nav{background:rgba(42,36,32,.72)}
+html[data-theme="dark"] .page-nav summary:focus-visible{outline-color:#d0ab78}
+@media(hover:hover) and (pointer:fine){.page-nav-links a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}}
+@media(max-width:640px){.page-nav{margin-top:24px}.page-nav-links{grid-template-columns:1fr;gap:0}}
 </style>
 <script src="/seasonal.js?v=6" defer></script></head>
 <body>
@@ -89,68 +104,76 @@ html[data-theme="dark"] .nav a:hover,html[data-theme="dark"] .foot a:hover{color
 <p class="intro">Moth is a self-care app with affirmations, quests, reflections, discoveries, progress, and other features. This policy explains what information Moth may process and how it is used.</p>
 <p>Moth is operated by Moth Self Care LLC. Moth's Privacy Officer and Data Protection Officer can be contacted at <a href="mailto:support@mothselfcare.com">support@mothselfcare.com</a> for privacy questions or requests.</p>
 
-<h2>Information you create in Moth</h2>
+<details class="page-nav"><summary>on this page<span class="page-nav-count">19 sections</span></summary><nav class="page-nav-links" aria-label="Page sections"><a href="#section-1">Information you create in Moth</a><a href="#section-2">Account and authentication information</a><a href="#section-3">Cloud backup and synchronization</a><a href="#section-4">Trusted time and technical information</a><a href="#section-5">Purchases and subscriptions</a><a href="#section-6">Sharing</a><a href="#section-7">Data sales and advertising</a><a href="#section-8">Consumer health data</a><a href="#section-9">Data retention and deleting your information</a><a href="#section-10">Service providers and international processing</a><a href="#section-11">Australia</a><a href="#section-12">Lawful bases for UK users</a><a href="#section-13">Your privacy rights</a><a href="#section-14">Security</a><a href="#section-15">Age assurance</a><a href="#section-16">Teen privacy</a><a href="#section-17">Children</a><a href="#section-18">Changes to this policy</a><a href="#section-19">Contact</a></nav></details>
+
+<h2 id="section-1">Information you create in Moth</h2>
 <p>Moth may store information you create or generate while using the app, including custom affirmations and quests, quest responses and history, Memory Jar entries, saved or liked content, app progress, days-in-a-row activity, milestones, moth discoveries, categories you select, categories or content types you read or interact with, and app preferences.</p>
 <p>Much of this information is stored locally on your device. Signing in opens your Moth account, but ordinary cloud backup and synchronization of supported memories, custom content, and progress stays off until you separately choose to enable cloud backup.</p>
 
-<h2>Account and authentication information</h2>
+<h2 id="section-2">Account and authentication information</h2>
 <p>If you choose to sign in, Moth may receive basic account information from the authentication provider, such as your email address, an account identifier, and authentication information needed to maintain your signed-in session. Moth uses this information to provide account features and associate cloud backups with the correct account.</p>
 
-<h2>Cloud backup and synchronization</h2>
-<p>Cloud backup is optional and separate from signing in. Before you can enable it, Moth asks two short understanding questions so you confirm that supported private self-care content will be stored in your Moth cloud account and that you can later turn cloud backup off and delete the ordinary cloud copy. Moth then asks for a separate explicit consent statement explaining that supported private self-care content may include health or wellness information. Moth records that consent before its ordinary cloud-save service can read or write your cloud save. You can turn cloud backup off later; doing so stops future ordinary cloud synchronization and deletes the ordinary Moth cloud-save copy while leaving your local data and Moth account intact. Moth does not use cloud-saved reflections or other personal self-care content for targeted advertising.</p>
+<h2 id="section-3">Cloud backup and synchronization</h2>
+<p>Cloud backup is optional and separate from signing in. Before you can enable it, Moth asks two short understanding questions so you confirm that supported private self-care content will be stored in your Moth cloud account and that you can later turn cloud backup off and delete the ordinary cloud copy. Moth then asks for a separate explicit consent statement explaining that supported private self-care content may include health or wellness information.</p>
+<p>Moth records that consent before its ordinary cloud-save service can read or write your cloud save. You can turn cloud backup off later; doing so stops future ordinary cloud synchronization and deletes the ordinary Moth cloud-save copy while leaving your local data and Moth account intact. Moth does not use cloud-saved reflections or other personal self-care content for targeted advertising.</p>
 
-<h2>Trusted time and technical information</h2>
+<h2 id="section-4">Trusted time and technical information</h2>
 <p>Moth may contact a trusted-time service so days in a row, seasonal content, discoveries, and other date-based features can work reliably. Moth's infrastructure providers may automatically process standard technical information such as IP address, device or request information, and timestamps as needed to deliver and protect their services.</p>
 
-<h2>Purchases and subscriptions</h2>
+<h2 id="section-5">Purchases and subscriptions</h2>
 <p>Moth offers optional paid features through Moth+. Moth+ purchases and subscriptions are processed by the App Store or Google Play and the services Moth uses to manage subscriptions. Moth may receive information needed to tell whether Moth+ is active, but does not receive your full payment-card number from the app store.</p>
 
-<h2>Sharing</h2>
+<h2 id="section-6">Sharing</h2>
 <p>Moth may let you share certain content using your device's built-in sharing features. Sharing happens only when you choose to use those features. The app or service you choose to share with may handle that information under its own privacy practices.</p>
 
-<h2>Data sales and advertising</h2>
+<h2 id="section-7">Data sales and advertising</h2>
 <p>Moth does not sell your personal information or use personal information from the app for targeted advertising.</p>
 
-<h2>Consumer health data</h2>
+<h2 id="section-8">Consumer health data</h2>
 <p>Some reflections, custom content, category choices, interactions, and related account-linked information may qualify as consumer health data under certain laws when they reveal or relate to physical or mental health or wellness. Moth maintains a separate <a href="/consumer-health-data/">Consumer Health Data Privacy Notice</a> explaining the categories involved, how they are used and disclosed, and how to make consumer-health privacy requests or appeals.</p>
 
-<h2>Data retention and deleting your information</h2>
-<p>Moth retains account and cloud-backup data while your account remains active so account, backup, and synchronization features can work. When you delete a Moth account, Moth deletes ordinary account, cloud-backup, gameplay, and user-created cloud data through its account-deletion process. Limited purchase-linked recovery records may be retained separately after account deletion so Restore Purchases can recover Moth+ collectibles that were previously earned. These recovery records are pseudonymized using keyed hashes rather than stored with your ordinary Moth account profile, and they do not contain Memory Jar entries, custom affirmations or quests, or other ordinary cloud-save content. Moth currently retains these purchase-linked recovery records for as long as they are needed to provide purchase restoration and collectible recovery, unless Moth can honor a verified request for further deletion or a longer period is required for legal, security, fraud-prevention, accounting, or app-store transaction obligations.</p>
-<p>Moth includes controls that can remove or restart portions of your local progress. You can also remove locally stored app data by uninstalling Moth, subject to device or operating-system backups. If you have a Moth account, you can request deletion of your account and associated cloud data through the <a href="/delete-account/">account deletion page</a> or by contacting <a href="mailto:support@mothselfcare.com">support@mothselfcare.com</a>. You may also contact that address to ask about or request further deletion of retained Moth-controlled information, subject to records that Moth or app-store and payment providers must retain for legal or transactional reasons.</p>
+<h2 id="section-9">Data retention and deleting your information</h2>
+<p>Moth retains account and cloud-backup data while your account remains active so account, backup, and synchronization features can work. When you delete a Moth account, Moth deletes ordinary account, cloud-backup, gameplay, and user-created cloud data through its account-deletion process. Limited purchase-linked recovery records may be retained separately after account deletion so Restore Purchases can recover Moth+ collectibles that were previously earned.</p>
+<p>These recovery records are pseudonymized using keyed hashes rather than stored with your ordinary Moth account profile, and they do not contain Memory Jar entries, custom affirmations or quests, or other ordinary cloud-save content.</p>
+<p>Moth currently retains these purchase-linked recovery records for as long as they are needed to provide purchase restoration and collectible recovery, unless Moth can honor a verified request for further deletion or a longer period is required for legal, security, fraud-prevention, accounting, or app-store transaction obligations.</p>
+<p>Moth includes controls that can remove or restart portions of your local progress. You can also remove locally stored app data by uninstalling Moth, subject to device or operating-system backups. If you have a Moth account, you can request deletion of your account and associated cloud data through the <a href="/delete-account/">account deletion page</a> or by contacting <a href="mailto:support@mothselfcare.com">support@mothselfcare.com</a>.</p>
+<p>You may also contact that address to ask about or request further deletion of retained Moth-controlled information, subject to records that Moth or app-store and payment providers must retain for legal or transactional reasons.</p>
 
-<h2>Service providers and international processing</h2>
+<h2 id="section-10">Service providers and international processing</h2>
 <p>Moth uses service providers for authentication, cloud storage and synchronization, trusted time, app distribution, and subscription management. These providers may process information as needed to provide those services. Depending on where you live and where a provider operates, information may be processed or stored in a country other than your own.</p>
 <p>Moth requires service providers and other third parties that process Moth-controlled user data to provide appropriate privacy and security protections consistent with applicable law, including contractual or other safeguards for international processing where required. Their services may also be governed by their own terms and privacy notices.</p>
 
-<h2>Australia</h2>
+<h2 id="section-11">Australia</h2>
 <p>For Australian users, Moth treats private self-care content that may reveal physical or mental health or wellness information as sensitive. Before optional private-content cloud backup can be enabled, the understanding check described above must be completed and Moth then asks for separate explicit consent. If the user does not demonstrate that understanding, private-content cloud backup stays off. Moth's local-first features remain available without enabling that backup.</p>
 <p>If you are in Australia and have a privacy complaint, contact Moth first at <a href="mailto:support@mothselfcare.com">support@mothselfcare.com</a>. If the issue is not resolved after Moth has had a reasonable opportunity to respond, you may be able to make a complaint to the <a href="https://www.oaic.gov.au/privacy/privacy-complaints">Office of the Australian Information Commissioner (OAIC)</a>.</p>
 
-<h2>Lawful bases for UK users</h2>
+<h2 id="section-12">Lawful bases for UK users</h2>
 <p>Where UK data-protection law applies, Moth uses personal information only when it has an applicable lawful basis. Depending on the activity, Moth may process information because it is necessary to provide a feature or service you request, because Moth has a legitimate interest in operating, securing, supporting, and improving the reliability of the service without overriding your rights, because Moth must comply with a legal obligation, or because you have given consent.</p>
 <p>Optional cloud backup is separate from signing in. Where cloud-saved content may reveal information about physical or mental health or wellness, Moth relies on the separate explicit cloud-backup consent described above for that sensitive content. You can withdraw that consent by turning cloud backup off. Moth does not use sensitive cloud-saved content for advertising, public profiling, or decisions with legal or similarly significant effects.</p>
 
-<h2>Your privacy rights</h2>
-<p>Depending on where you live, you may have rights to request access to personal information Moth controls about you, ask that inaccurate information be corrected, request deletion, object to or limit certain processing, or withdraw consent where Moth relies on consent. To make a privacy request, contact <a href="mailto:support@mothselfcare.com">support@mothselfcare.com</a>. Moth may need limited information to verify a request, but you do not need to send the text of a private reflection, diagnosis, symptom, or other sensitive detail just to make a request.</p>
+<h2 id="section-13">Your privacy rights</h2>
+<p>Depending on where you live, you may have rights to request access to personal information Moth controls about you, ask that inaccurate information be corrected, request deletion, object to or limit certain processing, or withdraw consent where Moth relies on consent.</p>
+<p>To make a privacy request, contact <a href="mailto:support@mothselfcare.com">support@mothselfcare.com</a>. Moth may need limited information to verify a request, but you do not need to send the text of a private reflection, diagnosis, symptom, or other sensitive detail just to make a request.</p>
 <p>Withdrawing consent does not affect processing that was lawful before withdrawal. Where a feature depends on consent, withdrawing that consent may mean the feature can no longer operate. For example, turning off Moth's optional cloud backup stops future ordinary cloud synchronization and deletes the ordinary Moth cloud-save copy while leaving local data and the Moth account intact.</p>
 
-<h2>Security</h2>
+<h2 id="section-14">Security</h2>
 <p>Moth uses reasonable technical and organizational measures intended to protect its data. No device, storage system, or internet transmission can be guaranteed to be completely secure.</p>
 
-<h2>Age assurance</h2>
-<p>Moth is intended for people age 13 and older. Before ordinary app use, Moth asks only whether you are 13 or older. The app stores the positive 13+ eligibility confirmation locally on the device; this check does not ask for your date of birth, exact age, identity document, or biometric information. If you indicate that you are under 13, Moth does not proceed. If applicable law later requires a stronger age-assurance method, Moth will prefer a privacy-preserving age-range signal and will explain any additional information involved.</p>
+<h2 id="section-15">Age assurance</h2>
+<p>Moth is intended for people age 13 and older. Before ordinary app use, Moth asks only whether you are 13 or older. The app stores the positive 13+ eligibility confirmation locally on the device; this check does not ask for your date of birth, exact age, identity document, or biometric information.</p>
+<p>If you indicate that you are under 13, Moth does not proceed. If applicable law later requires a stronger age-assurance method, Moth will prefer a privacy-preserving age-range signal and will explain any additional information involved.</p>
 <p>For users in the United Arab Emirates, this 13+ confirmation is part of Moth's current age-assurance approach for a non-social self-care app. Moth does not provide public profiles, followers, comments, chat, direct messages, public posting, or targeted advertising.</p>
 
-<h2>Teen privacy</h2>
+<h2 id="section-16">Teen privacy</h2>
 <p>Moth applies a high-privacy baseline broadly instead of collecting exact birth dates just to distinguish teens from adults. A plain-language <a href="/teen-privacy/">Teen Privacy</a> page explains the current 13+ assurance, optional sign-in, local storage, optional cloud backup, deletion options, and support path.</p>
 
-<h2>Children</h2>
+<h2 id="section-17">Children</h2>
 <p>Moth is intended for people age 13 and older. If you are under 13, please do not create an account or provide personal information through Moth. If the law where you live requires a parent or guardian to consent before you use Moth, that consent is required. If you believe a child under 13 has provided personal information through Moth, contact us so it can be reviewed and removed as appropriate.</p>
 
-<h2>Changes to this policy</h2>
+<h2 id="section-18">Changes to this policy</h2>
 <p>This Privacy Policy may change as Moth changes or adds features. When it does, the effective date at the top of this page will be updated.</p>
 
-<h2>Contact</h2>
+<h2 id="section-19">Contact</h2>
 <p>Moth Self Care LLC designates a Privacy Officer and Data Protection Officer for privacy compliance. For privacy questions, access or correction requests, deletion requests, consent withdrawal, or other privacy concerns, contact <a href="mailto:support@mothselfcare.com">support@mothselfcare.com</a>.</p>
 </main>
 <div class="footer-mark" aria-hidden="true"><img draggable="false" class="tiny-star" src="/assets/game-decor-stars.webp?v=1" alt=""><img draggable="false" src="/assets/game-decor-fern.webp?v=1" alt=""><img draggable="false" class="tiny-star" src="/assets/game-decor-stars.webp?v=1" alt=""></div>
